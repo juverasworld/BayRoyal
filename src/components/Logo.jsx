@@ -17,7 +17,10 @@ img{
 }
 
 @media (max-width: 64em) {
-  font-size: ${props=>props.theme.fontxxl};
+  img{
+    width:100px;
+  }
+  // font-size: ${props=>props.theme.fontxxl};
 
 };
 
