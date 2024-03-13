@@ -10,7 +10,10 @@ const VideoContainer = styled.section`
   height: 100vh;
   position: relative;
   background: url(/hero.mp4);
-
+// display:flex;
+// flex-direction:column;
+// justify-content:center;
+// align-items:center;
   video {
     width: 100%;
     height: 100vh;
@@ -52,16 +55,16 @@ const Title = styled(motion.div)`
   left: 0;
   z-index: 5;
 
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
   color: ${(props) => props.theme.text};
 
-//   div {
-//     display: flex;
-//     flex-direction: row;
-//   }
+  //   div {
+  //     display: flex;
+  //     flex-direction: row;
+  //   }
 
   h1 {
     font-family: "Kaushan Script";
@@ -86,7 +89,7 @@ const conatiner = {
 
     transition: {
       delayChildren: 2,
-     staggerChildren:0.3,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -99,48 +102,58 @@ const item = {
   },
 };
 
-export const slideIn = (direction, type, delay, duration) => {
-    return {
-      hidden: {
-        x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-        y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
-      },
-      show: {
-        x: 0,
-        y: 0,
-        transition: {
-          type: type,
-          delay: delay,
-          duration: duration,
-          ease: "easeOut",
-        },
-      },
-    };
-  };
+// export const slideIn = (direction, type, delay, duration) => {
+//   return {
+//     hidden: {
+//       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+//       y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+//     },
+//     show: {
+//       x: 0,
+//       y: 0,
+//       transition: {
+//         type: type,
+//         delay: delay,
+//         duration: duration,
+//         ease: "easeOut",
+//       },
+//     },
+//   };
+// };
 const CoverVideo = () => {
   return (
     <VideoContainer>
       <DarkOverlay />
       <Title variants={conatiner} initial="hidden" animate="show">
-      <div className="flex flex-wrap xl:mx-44 lg:mx-10 mx-2">
+        <div className="flex justify-center items-center ">
+
+        <div className="flex flex-wrap xl:mx-44 lg:mx-10 mx-2 mt-24">
           <div
             // variants={items}
             // initial="hidden"
             // animate="visible"
             className="w-full  md:w-1/2  relative lg:w-1/3 p-4   "
           >
-            <div className="border-[1px] rounded-[10px] p-4 h-[267px] o">
+            <motion.div
+            variants={item}
+            data-scroll
+            data-scroll-delay="0.13"
+            data-scroll-speed="4"
+            className="border-[1px] rounded-[10px] p-4 h-[267px] o">
+              <p
+                
+                className="font-semibold  text-[20px]   my-5"
+              >
+                Project
+              </p>
               <motion.p
-              variants={item} data-scroll data-scroll-delay="0.13" data-scroll-speed="4"
-              
-              
-              className="font-semibold  text-[20px]   my-5">
-              Project
-              </motion.p>
-              <motion.p 
-              data-scroll data-scroll-delay="0.3" data-scroll-speed="2"
-              className="my-5  text-[#4C4C4C]    ">
-              We deliver all projects using international best practices, timely and within industry matched budgets
+                data-scroll
+                data-scroll-delay="0.3"
+                data-scroll-speed="2"
+                className="my-5  text-[#4C4C4C]    "
+              >
+                We deliver all projects using international best practices,
+                timely and within industry matched budgets
               </motion.p>
               <p className="mt-3 mb-2 absolute bottom-5">
                 <svg
@@ -179,19 +192,14 @@ const CoverVideo = () => {
                   </defs>
                 </svg>
               </p>
-            </div>
+            </motion.div>
           </div>
-          <div
-            
-            className="w-full  md:w-1/2  relative lg:w-1/3 p-4  "
-          >
+          <div className="w-full  md:w-1/2  relative lg:w-1/3 p-4  ">
             <div className="border-[1px] rounded-[10px] p-4 h-[267px] o">
-              <p className="font-semibold  text-[20px]   my-5">
-                Easy Interface
-              </p>
+              <p className="font-semibold  text-[20px]   my-5">Payments</p>
               <p className="my-5  text-[#4C4C4C]    ">
-                Our platform is designed to cater for both seasoned traders and
-                newcomers, enhancing your overall trading journey.
+                We work with clients to assist them keep pace, capture and
+                develop responses to the rapidly changing payments landscape
               </p>
               <p className="mt-3 mb-2 absolute bottom-5">
                 <svg
@@ -232,17 +240,13 @@ const CoverVideo = () => {
               </p>
             </div>
           </div>
-          <div
-          
-            className="w-full  md:w-1/2  relative lg:w-1/3 p-4  "
-          >
+          <div className="w-full  md:w-1/2  relative lg:w-1/3 p-4  ">
             <div className="border-[1px] rounded-[10px] p-4 h-[267px] flex flex-col items-start  justify-start">
               <p className="font-semibold  text-[20px]   my-2">
-                Payout faster than normal
+                Payroll
               </p>
               <p className="my-2   text-[#4C4C4C]    ">
-                Fast crypto to naira; Expect your payouts to hit your account
-                faster than normal.
+              We offer employee management services using a professionally certified HR team for indigenous and multinational clients across varied sectors.
               </p>
               <p className="mt-3 mb-2 absolute bottom-5 ">
                 <svg
@@ -292,8 +296,7 @@ const CoverVideo = () => {
               </p>
             </div>
           </div>
-          
-         
+        </div>
         </div>
       </Title>
       <video src={MainVideo} type="video/mp4" autoPlay muted loop />
