@@ -194,7 +194,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="peter@bayroyalinternational.com"
+                href="mailto:peter@bayroyalinternational.com"
                 className="text-white py-5 px-5 border-[1px] border-white  hover:text-gray-900"
               >
                 <Gmail />

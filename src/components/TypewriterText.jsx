@@ -168,8 +168,10 @@ const TypewriterText = () => {
 
       <ButtonContainer>
         <ThemeProvider theme={dark}>
+<a href="mailto:peter@bayroyalinternational.com">
 
-        <Button text="Contact Us " link="#about" />
+        <Button text="Contact Us" />
+</a>
         </ThemeProvider>
       </ButtonContainer>
     </>

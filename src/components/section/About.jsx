@@ -249,7 +249,9 @@ const About = () => {
           </SubText>
           <ButtonContainer>
             <ThemeProvider theme={light}>
-              <Button text="Contact Us" link="#" />
+            <a href="mailto:peter@bayroyalinternational.com">
+              <Button text="Contact Us"  />
+              </a>
             </ThemeProvider>
           </ButtonContainer>
         </Box>
