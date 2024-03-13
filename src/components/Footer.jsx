@@ -198,10 +198,11 @@
 
 import React from "react";
 import Twitter from "../Icons/Twitter";
-
-import Instagram from "../Icons/Instagram";
+import Phone from "../assets/phone.png";
+// import Instagram from "../Icons/Instagram";
 import Facebook from "../Icons/Facebook";
 import LinkedIn from "../Icons/LinkedIn";
+import Gmail from "../Icons/Gmail";
 import Logo from "./Logo";
 const Footer = () => {
   return (
@@ -218,9 +219,6 @@ const Footer = () => {
           <div className="flex items-center justify-between flex-col lg:flex-row px-4">
             <div className="flex md:flex-row flex-col items-center justify-center ">
               <div className="lg:mx-10 mx-3 md:w-1/3 w-full">
-                <p className="">
-                  
-                </p>
                 Bay Royal International Limited: Your trusted partner for
                 business success. We excel in tailored solutions, innovation,
                 and client-centricity, ensuring excellence in payments,
@@ -228,7 +226,9 @@ const Footer = () => {
               </div>
               <div className="lg:mx-5 mx-0">
                 <div className="flex flex-col">
-                  <p className="py-1">6b Bendel Close, Victoria Island, Lagos.</p>
+                  <p className="py-1">
+                    6b Bendel Close, Victoria Island, Lagos.
+                  </p>
                   <p>P: +234 803 912 3546</p>
                 </div>
                 <div className="py-1">
@@ -242,7 +242,9 @@ const Footer = () => {
                   <p className="py-1">P: +233 541 604 192</p>
                 </div>
                 <div className="py-1">
-                  <p className="py-1">Nairobi: Windsor House, University way,</p>
+                  <p className="py-1">
+                    Nairobi: Windsor House, University way,
+                  </p>
                   <p className="py-1">Muindi Mbugu Street, Nairobi, Kenya.</p>
                 </div>
               </div>
@@ -264,21 +266,20 @@ const Footer = () => {
               >
                 <LinkedIn />
               </a>
+
               <a
-                href="https://www.instagram.com/phenomenon__studio"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="peter@bayroyalinternational.com"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
               >
-                GMAIL
+                <Gmail />
               </a>
               <a
-                href="https://www.facebook.com/phenomenonstudio"
+                href="tel:+2348039123546"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
               >
-           Telelphone
+                <img src={Phone} alt="" className="bg-white w-auto" />
               </a>
             </div>
           </div>
