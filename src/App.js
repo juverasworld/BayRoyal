@@ -78,7 +78,7 @@ function App() {
               <div className="bg-cover bg-no-repeat bg-center">
 
               <Nav />
-              <div id="Home">
+              <div id="home">
 
               <Mab />
               </div>
