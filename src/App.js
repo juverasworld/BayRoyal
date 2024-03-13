@@ -26,46 +26,26 @@ import { AnimatePresence } from "framer-motion";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Hero from "./components/Comp";
 import Ana from "./components/Ana";
-// function App() {
-//   return (
-//   <>
-//    <GlobalStyles/>
+import Load from "./components/Loader";
+import Loader from "./components/Loader";
 
-//  <ThemeProvider theme={light}>
 
-//  <Nav/>
-//  <Mab/>
-//  <About/>
-//  <Roadmap/>
-//  {/* <Showcase/>
-//  <Team/> */}
-//  <Faq/>
-//  <Footer/>
-//  <ScrollToTop/>
-//  </ThemeProvider>
-//         </>
-//   );
-// }
-
-// import Banner from "./section/Banner";
-// import NewArrival from "./section/NewArrival";
 
 function App() {
   const containerRef = useRef(null);
   return (
     <>
-      <GlobalStyles />
+         <Loader/>
+      {/* <GlobalStyles />
       <ThemeProvider theme={light}>
         <LocomotiveScrollProvider
           options={{
             smooth: true,
-            // ... all available Locomotive Scroll instance options
+            
           }}
           watch={
             [
-              //..all the dependencies you want to watch to update the scroll.
-              //  Basicaly, you would want to watch page/location changes
-              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+             
             ]
           }
           containerRef={containerRef}
@@ -73,7 +53,6 @@ function App() {
           <ScrollTriggerProxy />
 
           <AnimatePresence>
-            {/* <Loader/> */}
             <main className="relative app z-0 black-gradient" data-scroll-container ref={containerRef}>
               <div className="bg-cover bg-no-repeat bg-center">
 
@@ -95,11 +74,7 @@ function App() {
 
               </div>
               <div />
-              {/* <Hero/> */}
-              {/* <Roadmap /> */}
-              {/* <Showcase/>
- <Team/> */}
-              {/* <Faq /> */}
+              
               <div id="contact"> 
 
               <Footer />
@@ -109,7 +84,7 @@ function App() {
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </>
   );
 }
