@@ -175,17 +175,7 @@
 // const Nav = () => {
 // const [click, setClick] = useState(false);
 
-// const scrollTo = (id) => {
-// let element = document.getElementById(id);
 
-// element.scrollIntoView({
-// behavior: "smooth",
-// block: "start",
-// inline: "nearest",
-// });
-
-// setClick(!click);
-// };
 
 // return (
 // <Section id="nav">
@@ -230,6 +220,17 @@ import close from "../assets/close.svg";
 import Logo from "./Logo";
 
 const Navbar = () => {
+  // const scrollTo = (id) => {
+// let element = document.getElementById(id);
+
+// element.scrollIntoView({
+// behavior: "smooth",
+// block: "start",
+// inline: "nearest",
+// });
+
+// setClick(!click);
+// };
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -253,8 +254,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 font-syne header view fadein active viewed  mini ${
-        scrolled ? "bg-white" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-20   view fadein active viewed  mini ${
+        scrolled ? "black-gradient" : "bg-transparent"
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
@@ -274,7 +275,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-black"
+                active === nav.title ? "text-white" : "text-white"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
@@ -300,7 +301,7 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-syne font-medium cursor-pointer text-[16px] ${
+                  className={`font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {

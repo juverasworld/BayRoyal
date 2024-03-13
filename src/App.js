@@ -78,11 +78,20 @@ function App() {
               <div className="bg-cover bg-no-repeat bg-center">
 
               <Nav />
+              <div id="Home">
+
               <Mab />
+              </div>
+<div id="about-us">
+
               <About />
+</div>
               <div>
-               
+                <div id="our-services">
+
                <Ana/>
+                </div>
+               
 
               </div>
               <div />
@@ -91,7 +100,10 @@ function App() {
               {/* <Showcase/>
  <Team/> */}
               {/* <Faq /> */}
+              <div id="contact"> 
+
               <Footer />
+              </div>
               </div>
               <ScrollToTop />
             </main>
