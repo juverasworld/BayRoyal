@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Typewriter from "typewriter-effect";
 import Button from "./Button";
 import { motion } from "framer-motion";
 
 
 import "@fontsource/akaya-telivigala";
+import { dark } from "../styles/Themes";
 
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
@@ -45,7 +46,8 @@ const Title = styled.h2`
 const Subtitle = styled.h3`
   font-size: ${(props) => props.theme.fontlg};
   text-transform: capitalize;
-  color: ${(props) => `rgba(${props.theme.textRgba}, 0.6)`};
+  color:white;
+  // color: ${(props) => `rgba(${props.theme.textRgba}, 0.6)`};
   font-weight: 600;
   margin-bottom: 1rem;
   border:2px, solid red;
@@ -67,6 +69,7 @@ const Subtitle = styled.h3`
 const ButtonContainer = styled.div`
   width: 80%;
   display:flex;
+  // background-color:white;
   // items
   // align-self: flex-start;
 
@@ -109,7 +112,7 @@ const TypewriterText = () => {
    
       <Title variants={conatiner} initial="hidden" animate="show" className="">
         
-        <div className="md:text-[2.5vw] text-[30px] leading-[50px] text-white relative ">
+        <div className="md:text-[2.5vw] text-[25px] leading-[50px] text-white relative ">
 
         <div className="flex ">
       <motion.h1 className="" variants={item} data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
@@ -164,7 +167,10 @@ const TypewriterText = () => {
 
 
       <ButtonContainer>
+        <ThemeProvider theme={dark}>
+
         <Button text="Contact Us " link="#about" />
+        </ThemeProvider>
       </ButtonContainer>
     </>
   );

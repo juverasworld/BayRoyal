@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../Carousel";
 import Button from "../Button";
-import { dark } from "../../styles/Themes";
+import { dark, light } from "../../styles/Themes";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -248,7 +248,7 @@ const About = () => {
           
           </SubText>
           <ButtonContainer>
-            <ThemeProvider theme={dark}>
+            <ThemeProvider theme={light}>
               <Button text="Contact Us" link="#" />
             </ThemeProvider>
           </ButtonContainer>
