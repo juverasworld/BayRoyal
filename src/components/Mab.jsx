@@ -32,7 +32,7 @@ const Mab = () => {
   return (
     
     <div  ref={ref}>
-         <div className="relative  app  lemon-background">
+         <div className="relative app z-0 black-gradient">
             <Contact />
             <StarsCanvas />
           </div>

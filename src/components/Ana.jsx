@@ -23,14 +23,14 @@ const VideoContainer = styled.section`
     height: 150vh;
     video {
         width: 100%;
-        height: 130vh;
+        height: 150vh;
         object-fit: cover;
       }
   @media (max-width: 48em) {
     height: 150vh;
     video {
         width: 150%;
-        height: 130vh;
+        height: 150vh;
         object-fit: cover;
       }
    
@@ -137,7 +137,7 @@ const CoverVideo = () => {
                 variants={item}
                 data-scroll
                 data-scroll-delay="0.13"
-                data-scroll-speed="12"
+                data-scroll-speed="4"
                 className="border-[1px] rounded-[10px] p-4 h-[267px] o"
               >
                 <motion.p
@@ -206,7 +206,7 @@ const CoverVideo = () => {
                 variants={item}
                 data-scroll
                 data-scroll-delay="0.13"
-                data-scroll-speed="12"
+                data-scroll-speed="4"
                 className="border-[1px] rounded-[10px] p-4 h-[267px] o"
               >
                 <motion.p
@@ -276,7 +276,7 @@ const CoverVideo = () => {
                 variants={item}
                 data-scroll
                 data-scroll-delay="0.13"
-                data-scroll-speed="13"
+                data-scroll-speed="4"
                 className="border-[1px] rounded-[10px] p-4 h-[267px] flex flex-col items-start  justify-start"
               >
                 <motion.p
