@@ -2,7 +2,7 @@
 
 
 
-import Phone from "../assets/phone.png";
+
 // import Instagram from "../Icons/Instagram";
 
 
@@ -14,6 +14,7 @@ import Twitter from "../Icons/Twitter";
 
 import Instagram from "../Icons/Instagram";
 import Gmail from "../Icons/Gmail";
+import Phone from "../Icons/Phone";
 import Facebook from "../Icons/Facebook";
 import LinkedIn from "../Icons/LinkedIn";
 
@@ -204,7 +205,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
               >
-                <img src={Phone} alt="" className="bg-white w-auto" />
+            <Phone/>
               </a>
             </div>
           </div>
