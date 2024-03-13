@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 // import { motion } from "framer-motion";
 // import { fadeIn } from "../utils/variants";
 import MainVideo from "../assets/heraa.mp4";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
 
 const VideoContainer = styled.section`
   width: 100%;
@@ -121,8 +125,27 @@ const item = {
 //   };
 // };
 const CoverVideo = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ref = useRef(null);
+  
+    useLayoutEffect(() => {
+      let element = ref.current;
+      ScrollTrigger.create({
+        trigger: element,
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+      });
+  
+      return () => {
+        ScrollTrigger.kill();
+      };
+    }, []);
   return (
-    <VideoContainer>
+    <VideoContainer ref={ref}>
       <DarkOverlay />
       <Title variants={conatiner} initial="hidden" animate="show">
         <div className="flex justify-center items-center ">
@@ -277,7 +300,7 @@ const CoverVideo = () => {
                 data-scroll
                 data-scroll-delay="0.13"
                 data-scroll-speed="4"
-                className="border-[1px] rounded-[10px] p-4 h-[267px] flex flex-col items-start  justify-start"
+                className="border-[1px] rounded-[10px] p-4 h-[267px]"
               >
                 <motion.p
                   data-scroll

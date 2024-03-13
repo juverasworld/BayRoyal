@@ -74,7 +74,9 @@ function App() {
 
           <AnimatePresence>
             {/* <Loader/> */}
-            <main className="App" data-scroll-container ref={containerRef}>
+            <main className="relative app z-0 black-gradient" data-scroll-container ref={containerRef}>
+              <div className="bg-cover bg-no-repeat bg-center">
+
               <Nav />
               <Mab />
               <About />
@@ -90,6 +92,7 @@ function App() {
  <Team/> */}
               {/* <Faq /> */}
               <Footer />
+              </div>
               <ScrollToTop />
             </main>
           </AnimatePresence>

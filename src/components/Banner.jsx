@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import img1 from "../assets/Nfts/bighead-1.svg";
-import img2 from "../assets/Nfts/bighead-2.svg";
-import img3 from "../assets/Nfts/bighead-3.svg";
-import img4 from "../assets/Nfts/bighead-4.svg";
-import img5 from "../assets/Nfts/bighead-5.svg";
-import img6 from "../assets/Nfts/bighead-6.svg";
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
+import img4 from "../assets/4.png";
+// import img5 from "../assets/5.webp";
+// import img6 from "../assets/6.webp";
 import Button from "./Button";
 
 const Section = styled.section`
@@ -137,14 +137,17 @@ const Banner = () => {
         <img src={img1} alt="The Weirdo" />
         <img src={img2} alt="The Weirdo" />
         <img src={img3} alt="The Weirdo" />
-        <img src={img4} alt="The Weirdo" />
-        <img src={img5} alt="The Weirdo" />
+        <img src={img2} alt="The Weirdo" />
+        {/* <img src={img5} alt="The Weirdo" /> */}
       </ImgContainer>
       <Title>
-        Join the <br /> Weirdos club{" "}
+        Get Started <br /> With Us{" "}
       </Title>
       <BtnConatiner>
-        <JoinNow>Join Now</JoinNow>
+        <a href="https:google.com">
+
+        <JoinNow>Contact Us</JoinNow>
+        </a>
 
         {/* <Button text="join now" link="#" /> */}
       </BtnConatiner>

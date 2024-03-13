@@ -161,17 +161,17 @@ const Footer = () => {
             About{" "}
           </Item>
           <Item onClick={() => scrollTo("roadmap")} className="">
-            Roadmap
+           What We Do
           </Item>
           <Item onClick={() => scrollTo("showcase")} className="">
-            Showcase
+          Contact Us
           </Item>
-          <Item onClick={() => scrollTo("team")} className="">
+          {/* <Item onClick={() => scrollTo("team")} className="">
             Team
           </Item>
           <Item onClick={() => scrollTo("faq")} className="">
             Faq
-          </Item>
+          </Item> */}
         </MenuItems>
       </Container>
       <Bottom>
