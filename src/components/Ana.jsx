@@ -145,7 +145,7 @@ const CoverVideo = () => {
       };
     }, []);
   return (
-    <VideoContainer ref={ref}>
+    <VideoContainer >
       <DarkOverlay />
       <Title variants={conatiner} initial="hidden" animate="show">
         <div className="flex justify-center items-center ">

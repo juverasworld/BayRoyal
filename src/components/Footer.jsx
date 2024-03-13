@@ -143,14 +143,14 @@ const Footer = () => {
             <p className="py-1">Reach Us</p>
           </div> */}
           <div className="flex items-center justify-between flex-col lg:flex-row px-4">
-            <div className="flex md:flex-row flex-col items-center justify-center ">
-              <div className="lg:mx-10 mx-3 md:w-1/3 w-full">
+            <div className="flex md:flex-row flex-col items-center justify-center md:my-0 my-3 ">
+              <div className="lg:mx-10 mx-3 md:w-1/3 w-full md:my-0 my-2">
                 Bay Royal International Limited: Your trusted partner for
                 business success. We excel in tailored solutions, innovation,
                 and client-centricity, ensuring excellence in payments,
                 projects, payroll, and P.E.O. services.
               </div>
-              <div className="lg:mx-5 mx-0">
+              <div className="lg:mx-5 mx-0 md:my-0 my-2">
                 <div className="flex flex-col">
                   <p className="py-1">
                     6b Bendel Close, Victoria Island, Lagos.
@@ -175,12 +175,12 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row  items-center space-x-4">
+            <div className="flex flex-row  items-center space-x-4 md:my-0 my-5">
               <a
                 href="https://www.facebook.com/BayRoyalLtd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
+                className="text-white py-5 px-5 border-[1px] border-white hover:text-gray-900"
               >
                 <Facebook />
               </a>
@@ -188,14 +188,14 @@ const Footer = () => {
                 href="https://linkedin.com/company/bayroyal-international-limited"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
+                className="text-white py-5 px-5 border-[1px] border-white hover:text-gray-900"
               >
                 <LinkedIn />
               </a>
 
               <a
                 href="peter@bayroyalinternational.com"
-                className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
+                className="text-white py-5 px-5 border-[1px] border-white  hover:text-gray-900"
               >
                 <Gmail />
               </a>
@@ -203,7 +203,7 @@ const Footer = () => {
                 href="tel:+2348039123546"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
+                className="text-white py-5 px-5 border-[1px] border-white hover:text-gray-900"
               >
             <Phone/>
               </a>
