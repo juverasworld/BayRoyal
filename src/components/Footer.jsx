@@ -208,7 +208,7 @@ const Footer = () => {
     <div>
       <div className="bg-gradient py-24 text-white">
         <footer className="py-1">
-          <div className="flex items-center justify-between flex-col lg:flex-row px-4">
+          <div className="flex items-center justify-between md:mx-10 mx-3 flex-col lg:flex-row px-4">
             <p className="py-1">
               <Logo />
             </p>
@@ -218,6 +218,9 @@ const Footer = () => {
           <div className="flex items-center justify-between flex-col lg:flex-row px-4">
             <div className="flex md:flex-row flex-col items-center justify-center ">
               <div className="lg:mx-10 mx-3 md:w-1/3 w-full">
+                <p className="">
+                  
+                </p>
                 Bay Royal International Limited: Your trusted partner for
                 business success. We excel in tailored solutions, innovation,
                 and client-centricity, ensuring excellence in payments,
@@ -246,7 +249,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-row  items-center space-x-4">
               <a
-                href="https://www.behance.net/phenomenon-studio"
+                href="https://www.facebook.com/BayRoyalLtd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
@@ -254,7 +257,7 @@ const Footer = () => {
                 <Facebook />
               </a>
               <a
-                href="https://www.linkedin.com/company/26241149"
+                href="https://linkedin.com/company/bayroyal-international-limited"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
@@ -267,7 +270,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
               >
-                <Twitter />
+                GMAIL
               </a>
               <a
                 href="https://www.facebook.com/phenomenonstudio"
@@ -275,7 +278,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-white py-5 px-5 border-[1px] border-whitehover:text-gray-900"
               >
-                <Instagram />
+           Telelphone
               </a>
             </div>
           </div>
