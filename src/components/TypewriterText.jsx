@@ -156,11 +156,11 @@ const TypewriterText = () => {
         /> */}
         </div>
       </Title>
-<div className="md:my-10 my-6">
+<div className="md:my-12 my-6">
 
       <Subtitle >
       <motion.p variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-        Payment. Project. Payroll
+        Payment <span className="text-red-700">.</span> Project <span className="text-red-700">.</span> Payroll
         </motion.p>
         </Subtitle>
 </div>
