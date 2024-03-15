@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-
+import React, { useEffect } from "react";
+import gsap from "gsap";
 
 import GlobalStyles from "../styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
@@ -32,13 +31,14 @@ const Loader = () => {
   useEffect(() => {
     const animate = (counter, duration, delay = 0) => {
       const numHeight = counter.querySelector(".num").clientHeight;
-      const totalDistance = (counter.querySelectorAll(".num").length - 1) * numHeight;
+      const totalDistance =
+        (counter.querySelectorAll(".num").length - 1) * numHeight;
 
       gsap.to(counter, {
         y: -totalDistance,
         duration: duration,
         delay: delay,
-        ease: "power2.inOut"
+        ease: "power2.inOut",
       });
     };
 
@@ -83,11 +83,13 @@ const Loader = () => {
       delay: 6,
     });
 
-    gsap.to(".loader-2", {
-      x: -7,
-      y: 75,
-      duration: 0.5,
-    },
+    gsap.to(
+      ".loader-2",
+      {
+        x: -7,
+        y: 75,
+        duration: 0.5,
+      },
       "<"
     );
 
@@ -120,114 +122,108 @@ const Loader = () => {
       ease: "power4.inOut",
       stagger: {
         amount: 0.1,
-      }
+      },
     });
   }, []);
 
   const containerRef = useRef(null);
   return (
-  <>
-
-
-        <div className="">
+    <>
+      <div className="">
         <GlobalStyles />
-      <ThemeProvider theme={light}>
-        <LocomotiveScrollProvider
-          options={{
-            smooth: true,
-            // ... all available Locomotive Scroll instance options
-          }}
-          watch={
-            [
-              //..all the dependencies you want to watch to update the scroll.
-              //  Basicaly, you would want to watch page/location changes
-              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-            ]
-          }
-          containerRef={containerRef}
-        >
-          <ScrollTriggerProxy />
+        <ThemeProvider theme={light}>
+          <LocomotiveScrollProvider
+            options={{
+              smooth: true,
+              // ... all available Locomotive Scroll instance options
+            }}
+            watch={
+              [
+                //..all the dependencies you want to watch to update the scroll.
+                //  Basicaly, you would want to watch page/location changes
+                //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+              ]
+            }
+            containerRef={containerRef}
+          >
+            <ScrollTriggerProxy />
 
-          <AnimatePresence>
-            <main className="relative app z-0 black-gradient" data-scroll-container ref={containerRef}>
-              <div className="bg-cover bg-no-repeat bg-center">
-
-              <Nav />
-              <div id="home">
-
-              <Mab />
-              </div>
-<div id="about-us">
-
-              <About />
-</div>
-              <div>
-                <div id="our-services">
-
-               <Ana/>
-                </div>
-               
-
-              </div>
-              <div />
-              {/* <Hero/> */}
-              {/* <Roadmap /> */}
-              {/* <Showcase/>
+            <AnimatePresence>
+              <main
+                className="relative app z-0 black-gradient"
+                data-scroll-container
+                ref={containerRef}
+              >
+                <div className="bg-cover bg-no-repeat bg-center">
+                  <Nav />
+                  <div id="home">
+                    <Mab />
+                  </div>
+                  <div id="about-us">
+                    <About />
+                  </div>
+                  <div>
+                    <div id="our-services">
+                      <Ana />
+                    </div>
+                  </div>
+                  <div />
+                  {/* <Hero/> */}
+                  {/* <Roadmap /> */}
+                  {/* <Showcase/>
  <Team/> */}
-              {/* <Faq /> */}
-              <div id="contact"> 
+                  {/* <Faq /> */}
+                  <div id="contact">
+                    <Footer />
+                  </div>
+                </div>
+                <ScrollToTop />
+              </main>
+            </AnimatePresence>
+          </LocomotiveScrollProvider>
+        </ThemeProvider>
+      </div>
 
-              <Footer />
-              </div>
-              </div>
-              <ScrollToTop />
-            </main>
-          </AnimatePresence>
-        </LocomotiveScrollProvider>
-      </ThemeProvider>
+      <div className="loading-screen">
+        <div className="loader">
+          <div className="loader-1 bar"></div>
+          <div className="loader-2 bar"></div>
         </div>
 
-        <div className="loading-screen">
-          <div className="loader">
-            <div className="loader-1 bar"></div>
-            <div className="loader-2 bar"></div>
+        <div className="counter">
+          <div className="counter-1 digit">
+            <div className="num">0</div>
+            <div className="num num1offset1">1</div>
           </div>
-
-          <div className="counter">
-            <div className="counter-1 digit">
-              <div className="num">0</div>
-              <div className="num num1offset1">1</div>
-            </div>
-            <div className="counter-2 digit">
-              <div className="num">0</div>
-              <div className="num num1offset2">1</div>
-              <div className="num">2</div>
-              <div className="num">3</div>
-              <div className="num">4</div>
-              <div className="num">5</div>
-              <div className="num">6</div>
-              <div className="num">7</div>
-              <div className="num">8</div>
-              <div className="num">9</div>
-              <div className="num">0</div>
-            </div>
-            <div className="counter-3 digit">
-              <div className="num">0</div>
-              <div className="num">1</div>
-              <div className="num">2</div>
-              <div className="num">3</div>
-              <div className="num">4</div>
-              <div className="num">5</div>
-              <div className="num">6</div>
-              <div className="num">7</div>
-              <div className="num">8</div>
-              <div className="num">9</div>
-              <div className="num">0</div>
-            </div>
+          <div className="counter-2 digit">
+            <div className="num">0</div>
+            <div className="num num1offset2">1</div>
+            <div className="num">2</div>
+            <div className="num">3</div>
+            <div className="num">4</div>
+            <div className="num">5</div>
+            <div className="num">6</div>
+            <div className="num">7</div>
+            <div className="num">8</div>
+            <div className="num">9</div>
+            <div className="num">0</div>
+          </div>
+          <div className="counter-3 digit">
+            <div className="num">0</div>
+            <div className="num">1</div>
+            <div className="num">2</div>
+            <div className="num">3</div>
+            <div className="num">4</div>
+            <div className="num">5</div>
+            <div className="num">6</div>
+            <div className="num">7</div>
+            <div className="num">8</div>
+            <div className="num">9</div>
+            <div className="num">0</div>
           </div>
         </div>
-  </>
-     
+      </div>
+    </>
   );
 };
 

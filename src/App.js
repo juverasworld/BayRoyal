@@ -14,6 +14,8 @@ import Faq from "./components/section/Faq";
 import ScrollToTop from "./components/ScrollToTop";
 import Mab from "./components/Mab";
 import { motion } from "framer-motion";
+import {Route, Routes} from 'react-router-dom';
+import Projects from "./pages/Projects";
 // import { slideIn } from "../../utils/motion";
 // import { ThemeProvider } from "styled-components";
 
@@ -35,7 +37,13 @@ function App() {
   const containerRef = useRef(null);
   return (
     <>
-         <Loader/>
+
+<Routes>
+       <Route path='/' element={<Loader/>}/>
+       <Route path='/Projects' element={<Projects/>}/>
+       {/* <Route path='/services' element={<OurService/>}/> */}
+   </Routes>
+         
       {/* <GlobalStyles />
       <ThemeProvider theme={light}>
         <LocomotiveScrollProvider
