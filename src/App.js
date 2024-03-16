@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { light } from "./styles/Themes";

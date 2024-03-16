@@ -1,64 +1,70 @@
-import React, { useEffect } from 'react';
-// import Bg from "../assets/bg.avif"
-// import './style.css'; // Make sure to import your CSS file
-import { StarsCanvas } from '../components/canvas';
-import { TweenMax, Power2, Power3 } from 'gsap';
-import Nav from "../components/Nav"
-const PhotographerPortfolio = () => {
-  useEffect(() => {
-    TweenMax.to('.left', 2, {
-      delay: 0.8,
-      width: '50%',
-      ease: Power2.easeInOut,
-    });
 
-    TweenMax.to('.right', 2, {
-      delay: 0.6,
-      width: '50%',
-      ease: Power3.easeInOut,
-    });
-  }, []);
+import React, { useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+import "../App.css"
 
-  return (
+gsap.registerPlugin(ScrollTrigger);
+const Projects = () => {
 
+    useEffect(() => {
+      
+        const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#main",
+              start: "50% 50%",
+              end: "150% 50%",
+              scrub: 2,
+              pin: true
+            }
+          });
+        tl
+        .to("#center",{
+           height: "100vh",
+        },'a')
+        .to("#top",{
+            top: "-50%",
+         },'a')
+         .to("#bottom",{
+            bottom: "-50%",
+         },'a')
+        .to("#top-h1",{
+            top: "60%"
+         },'a')
+         .to("#bottom-h1",{
+            bottom: "-30%"
+         },'a')
+        .to("#center-h1",{
+           top: "-30%"
+        },'a')
+        .to(".content",{
+           delay: -0.2,
+           marginTop: "0%"
+        })
     
-    <div className="wrapper">
-      <div className="left"></div>
-      <div className="right"></div>
-
-      <Nav/>
-
-      <div className="content">
-        <div className="img-wrapper bg-[url('./assets/bg.avif')]">
-          <div className="karina"></div>
+    
+    }, [])
+    
+  return (
+    <div id="main">
+        <div id="top">
+            <h1 id="top-h1">GRAVITY</h1>
         </div>
-
-        {/* <div className="info lg:w-auto w-full">
-          <ul className='flex w-full'>
-            <li>unsplash.com</li>
-            <li>@karinates</li>
-            <li>karinates.com</li>
-            <li>
-              <i className="fa fa-share-alt"></i>
-            </li>
-          </ul>
-        </div> */}
-
-        <div className="text lg:text-left text-center">
-          <h1>karina tes</h1>
-          <p className='md:text-left text-center'>Fashion Photographer</p>
-
-          <StarsCanvas/>
+        <div id="center">
+            <div class="content">
+                <h4>GRAVITY</h4>
+                <h3><i>Browse</i> the work that define a <i>movement</i> and created a craft.</h3>
+                <div class="btn">
+                    <h5>ENTER GALLERY</h5>
+                </div>
+                <h2>(17)</h2>
+            </div>
         </div>
-
-        <div className="name">karina tes</div>
-
-        <div className="bottomnav ">
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero delectus recusandae voluptatibus! Sed dolores nam nesciunt consectetur aliquid omnis illum cupiditate quaerat quisquam hic minima neque, itaque totam possimus quod!</p>
+        <div id="bottom">
+            <h1 id="bottom-h1">GRAVITY</h1>
         </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default PhotographerPortfolio;
+export default Projects

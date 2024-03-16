@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../Carousel";
 import Button from "../Button";
 import { dark, light } from "../../styles/Themes";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -249,10 +250,18 @@ const About = () => {
           </SubText>
           <ButtonContainer>
             <ThemeProvider theme={light}>
-            <a href="mailto:peter@bayroyalinternational.com">
+            {/* <a href="mailto:peter@bayroyalinternational.com">
               <Button text="Contact Us"  />
-              </a>
-            </ThemeProvider>
+              </a> */}
+              <Link to="/Projects">
+              <Button text="Contact Us"  />
+              </Link>
+              </ThemeProvider>
+
+            {/* <a href="mailto:peter@bayroyalinternational.com">
+              <Button text="Contact Us"  />
+              </a> */}
+            {/* </ThemeProvider> */}
           </ButtonContainer>
         </Box>
       </Container>
