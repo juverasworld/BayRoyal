@@ -16,6 +16,7 @@ import Mab from "./components/Mab";
 import { motion } from "framer-motion";
 import {Route, Routes} from 'react-router-dom';
 import Projects from "./pages/Projects";
+import Payment from "./pages/Payment";
 // import { slideIn } from "../../utils/motion";
 // import { ThemeProvider } from "styled-components";
 
@@ -41,6 +42,7 @@ function App() {
 <Routes>
        <Route path='/' element={<Loader/>}/>
        <Route path='/Projects' element={<Projects/>}/>
+       <Route path='/Payment' element={<Payment/>}/>
        {/* <Route path='/services' element={<OurService/>}/> */}
    </Routes>
          
