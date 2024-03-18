@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const LogoText = styled.h1`
 font-family: "Akaya Telivigala", cursive;
-font-size: ${props=>props.theme.fontxxxl};
-color: ${props=>props.theme.text};
+// font-size: ${props=>props.theme.fontxxxl};
+color: ${props=>props.theme.text};  
 transition: all 0.2 ease;
 img{
   width:200px;
@@ -64,7 +64,7 @@ const Logo = () => {
        <Link to="/">
         <img 
         
-        src="/new-logo.png" alt=""  />
+        src="/new-logo.png" alt="" className='border-2'  />
        </Link>
     </LogoText>
   )

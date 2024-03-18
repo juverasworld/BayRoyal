@@ -1,491 +1,534 @@
-// import React from "react";
-// import styled, { keyframes } from "styled-components";
-// import Nav from "../components/Nav"
+// import React, { useEffect } from 'react';
+// import { TweenMax, Expo, Power3 } from 'gsap';
+// import "../App.css"
+// // const AdidasLandingPage = () => {
+// //     useEffect(() => {
+// //         // Animation logic here
+// //         const animateElements = () => {
+// //             TweenMax.to('.first', 1.5, {
+// //                 delay: 0.2,
+// //                 left: '-100%',
+// //                 ease: Expo.easeInOut
+// //             });
 
-// import { motion } from "framer-motion";
-// import MainVideo from "../assets/hera.mp4";
-// import { StarsCanvas } from "../components/canvas";
+// //       TweenMax.to('.second', 1.5, {
+// //           delay: .4,
+// //           left: '-100%',
+// //           ease: Expo.easeInOut
+// //       })
 
+// //       TweenMax.to('.third', 1.5, {
+// //           delay: .6,
+// //           left: '-100%',
+// //           ease: Expo.easeInOut
+// //       })
 
-// const VideoContainer = styled.section`
-//   width: 100%;
-//   height: 100vh;
-//   position: relative;
+// //       TweenMax.from('.logo', 1, {
+// //           delay: 1,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.menu', 1, {
+// //           delay: 1.2,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
 
-//   video {
-//     width: 100%;
-//     height: 100vh;
-//     object-fit: cover;
-//   }
-// `;
-// const DarkOverlay = styled.div`
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   z-index: 1;
+// //       TweenMax.from('.search', .8, {
+// //           delay: 1.6,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
 
-//   background-color: rgba(0, 0, 0, 0.5);
-// `;
+// //       TweenMax.from('.bag', 1, {
+// //           delay: 1.6,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
 
-// const Title = styled(motion.div)`
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   z-index: 5;
-//   font-size: ${(props) => props.theme.fontxxl};
-//   text-transform: capitalize;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   color: ${(props) => props.theme.text};
+// //       TweenMax.staggerFrom('.media ul li', 1, {
+// //           delay: 2,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Power3.easeInOut
+// //       }, 0.08)
 
-//   div {
-//     display: flex;
-//     flex-direction: row;
-//   }
+// //       TweenMax.from('.size', 1, {
+// //           delay: 1.8,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.staggerFrom('.size ul li', .3, {
+// //           delay: 2,
+// //           opacity: 0,
+// //           y: 20,
+// //           ease: Power3.easeInOut
+// //       }, 0.08)
+// //       TweenMax.from('.bottom-right ul li:first-child', .5, {
+// //           delay: 2.4,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.bottom-right ul li:last-child', .6, {
+// //           delay: 2.4,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.bottom-img', 1, {
+// //           delay: 2.4,
+// //           opacity: 0,
+// //           x: -20,
+// //           ease: Expo.easeInOut
+// //       })
 
-//   h1 {
-   
-//     // font-size: ${(props) => props.theme.fontBig};
-//     // text-shadow: 1px 1px 1px ${(props) => props.theme.body};
-//   }
-//   h2 {
-   
-//     // font-size: ${(props) => props.theme.fontlg};
-//     // text-shadow: 1px 1px 1px ${(props) => props.theme.body};
-  
-//     text-transform: capitalize;
-//   }
-// `;
+// //       TweenMax.from('.product-title', 3, {
+// //           delay: 2.2,
+// //           opacity: 0,
+// //           y: 50,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.product-img', 1, {
+// //           delay: 4.2,
+// //           opacity: 0,
+// //           y: -800,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.product-desc p', 3, {
+// //           delay: 4.5,
+// //           opacity: 0,
+// //           y: -50,
+// //           ease: Expo.easeInOut
+// //       })
+// //       TweenMax.from('.product-desc button', 3, {
+// //           delay: 6,
+// //           opacity: 0,
+// //           y: -50,
+// //           ease: Expo.easeInOut
+// //       })
+// //         };
 
-// const Box = styled.div`
-//   width: 75%;
-//   display: flex;
-//   height: 100%;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// `;
-// const rotate = keyframes`
-// 100%{
-//   transform:rotate(1turn);
-// }
-// `;
+// //         animateElements();
 
-// const Round = styled.div`
-//   position: absolute;
-//   bottom: 2rem;
-//   right: 90%;
-//   width: 6rem;
-//   height: 6rem;
-//   background: white;
-//   transition: all ease 0.5s;
-//   border: 1px solid ${(props) => props.theme.text};
-//   border-radius: 50%;
+// //         // Clean up animations on unmount
+// //         return () => {
+// //             // Ensure to clean up any ongoing animations or timers
+// //         };
+// //     }, []);
 
-//   :hover {
-//     background-color: orange;
-//     transition:all ease-in-out 0.5s;
-//   border-radius: 50%;
-//   z-index:-1;
+// //     return (
+// //       <>
+// //        <div class="container">
 
-//   }
-//   img {
-//     width: 100%;
-//     height: auto;
-//     animation: ${rotate} 6s linear infinite reverse;
-//     // :hover {
-//     //     background-color: orange;
-//     //     transition:all ease 0.5s;
-//     //   }
-//   }
+// // <div class="overlay first"></div>
+// // <div class="overlay second"></div>
+// // <div class="overlay third"></div>
 
-//   @media (max-width: 64em) {
-//     width: 4rem;
-//     height: 4rem;
-//     left: none;
-//     right: 2rem;
-//     bottom: 100%;
-//   }
-//   @media (max-width: 48em) {
-//     right: 1rem;
-//   }
-// `;
+// // </div>
+// //       </>
+// //     );
+// // };
 
-// const Circle = styled.span`
-//   width: 2rem;
-//   height: 2rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 50%;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: black;
-//   transition:all ease 0.5s;
+// // export default AdidasLandingPage;
 
-//   color: ${(props) => props.theme.body};
-//   font-size: ${(props) => props.themefontxl};
+// // import React from 'react';
 
-//   :hover {
-//     background-color:green;
-//     transition:all ease 0.5s;
+// const App = () => {
+//   const handleMenuClick = () => {
+//     const navLinks = document.getElementById("nav-links");
+//     navLinks.classList.toggle("open");
+//     const isOpen = navLinks.classList.contains("open");
+//     const menuBtnIcon = document.getElementById("menu-btn").querySelector("i");
+//     menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 //   };
-//   @media (max-width: 64em) {
-//     width: 2rem;
-//     height: 2rem;
-//     font-size: ${(props) => props.themefontlg};
-//   }
-// `;
-// const conatiner = {
-//   hidden: {
-//     opacity: 0,
-//   },
-//   show: {
-//     opacity: 1,
 
-//     transition: {
-//       delayChildren: 2,
-//       staggerChildren: 0.3,
-//     },
-//   },
-// };
-// const item = {
-//   hidden: {
-//     opacity: 0,
-//   },
-//   show: {
-//     opacity: 1,
-//   },
-// };
-// const CoverVideo = () => {
+//   const handleCloseMenu = () => {
+//     const navLinks = document.getElementById("nav-links");
+//     navLinks.classList.remove("open");
+//     const menuBtnIcon = document.getElementById("menu-btn").querySelector("i");
+//     menuBtnIcon.setAttribute("class", "ri-menu-line");
+//   };
+
+//   // const scrollRevealOption = {
+//   //   distance: "50px",
+//   //   origin: "bottom",
+//   //   duration: 1000,
+//   // };
+
+//   // React.useEffect(() => {
+//   //   const scrollReveal = require("scrollreveal").default;
+//   //   scrollReveal().reveal(".content h1", { ...scrollRevealOption });
+//   //   scrollReveal().reveal(".content h4", { ...scrollRevealOption, delay: 500 });
+//   //   scrollReveal().reveal(".content h2, .content h6, .content form", { ...scrollRevealOption, delay: 1000 });
+//   //   scrollReveal().reveal(".content p", { ...scrollRevealOption, delay: 1500 });
+//   //   scrollReveal().reveal(".content .socials span", { ...scrollRevealOption, delay: 2000, interval: 500 });
+//   // }, []);
+
+//   useEffect(() => {
+//     // Animation logic here
+//     const animateElements = () => {
+//         TweenMax.to('.first', 1.5, {
+//             delay: 0.2,
+//             left: '-100%',
+//             ease: Expo.easeInOut
+//         });
+
+//   TweenMax.to('.second', 1.5, {
+//       delay: .4,
+//       left: '-100%',
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.to('.third', 1.5, {
+//       delay: .6,
+//       left: '-100%',
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.from('.logo', 1, {
+//       delay: 1,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.menu', 1, {
+//       delay: 1.2,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.from('.search', .8, {
+//       delay: 1.6,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.from('.bag', 1, {
+//       delay: 1.6,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.staggerFrom('.media ul li', 1, {
+//       delay: 2,
+//       opacity: 0,
+//       x: -20,
+//       ease: Power3.easeInOut
+//   }, 0.08)
+
+//   TweenMax.from('.size', 1, {
+//       delay: 1.8,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.staggerFrom('.size ul li', .3, {
+//       delay: 2,
+//       opacity: 0,
+//       y: 20,
+//       ease: Power3.easeInOut
+//   }, 0.08)
+//   TweenMax.from('.bottom-right ul li:first-child', .5, {
+//       delay: 2.4,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.bottom-right ul li:last-child', .6, {
+//       delay: 2.4,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.bottom-img', 1, {
+//       delay: 2.4,
+//       opacity: 0,
+//       x: -20,
+//       ease: Expo.easeInOut
+//   })
+
+//   TweenMax.from('.product-title', 3, {
+//       delay: 2.2,
+//       opacity: 0,
+//       y: 50,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.product-img', 1, {
+//       delay: 4.2,
+//       opacity: 0,
+//       y: -800,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.product-desc p', 3, {
+//       delay: 4.5,
+//       opacity: 0,
+//       y: -50,
+//       ease: Expo.easeInOut
+//   })
+//   TweenMax.from('.product-desc button', 3, {
+//       delay: 6,
+//       opacity: 0,
+//       y: -50,
+//       ease: Expo.easeInOut
+//   })
+//     };
+
+//     animateElements();
+
+//     // Clean up animations on unmount
+//     return () => {
+//         // Ensure to clean up any ongoing animations or timers
+//     };
+// }, []);
+
 //   return (
-//     <div className="">
-// <Nav/>
-//     <VideoContainer>
-//         <StarsCanvas/>
-//     <DarkOverlay />
-//     <Title variants={conatiner} initial="hidden" animate="show">
-//       <StarsCanvas/>
-//       <div className="text-white text-[24px] ">
-//         {/* <motion.h1 data-scroll data-scroll-speed="4">Wier</motion.h1> */}
 
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-//          P
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.9" data-scroll-speed="4">
-//           r
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-//           o
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-//           j
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-//           e
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-//           c
-//         </motion.h1>
-//         <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-//           t
-//         </motion.h1>
+//       <>
+//         <nav>
+//           <div className="nav__bar">
+//             <div className="nav__header">
+//               <div className="nav__logo">
+//                 <a href="#">Travel<span>.com</span></a>
+//               </div>
+//               <div className="nav__menu__btn" id="menu-btn" onClick={handleMenuClick}>
+//                 <i className="ri-menu-line"></i>
+//               </div>
+//             </div>
+//             <ul className="nav__links" id="nav-links" onClick={handleCloseMenu}>
+//               <li><a href="#">HOME</a></li>
+//               <li><a href="#">ABOUT US</a></li>
+//               <li><a href="#">BOOKING</a></li>
+//               <li><a href="#">CONTACT US</a></li>
+//             </ul>
+//           </div>
+//         </nav>
+//         <div className="container">
+//         <div class="overlay first"></div>
+//     <div class="overlay second"></div>
+//     <div class="overlay third"></div>
+
+//           <div className="content">
+//             <h1>Plan Your<br />Holiday</h1>
+//             <h4>Explore Worldwide</h4>
+//             <h2>GET 20% OFF</h2>
+//             <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
+//             <form action="/">
+//               <input type="text" placeholder="Enter Destination" />
+//               <button><i className="ri-arrow-right-s-line"></i></button>
+//             </form>
+//             <p>
+//               We are passionate about uncovering the wonders of our diverse world
+//               and sharing them with you. Our mission is to inspire a sense of
+//               discovery, and stories that make our planet unique.
+//             </p>
+//             <div className="socials">
+//               <span>
+//                 <a href="#"><i className="ri-facebook-fill"></i></a>
+//               </span>
+//               <span>
+//                 <a href="#"><i className="ri-twitter-fill"></i></a>
+//               </span>
+//               <span>
+//                 <a href="#"><i className="ri-instagram-line"></i></a>
+//               </span>
+//             </div>
+//           </div>
+//         </div>
+
+//       </>
+
+//   );
+// };
+
+// export default App;
+
+// import React, { useState } from 'react';
+// // import ScrollReveal from 'scrollreveal';
+// // import 'remixicon/fonts/remixicon.css'; // Importing Remixicon CSS
+// import '../App.css'; // Importing custom styles
+
+// const App = () => {
+//   const [navOpen, setNavOpen] = useState(false);
+
+//   const toggleNav = () => {
+//     setNavOpen(!navOpen);
+//   };
+
+//   const closeNav = () => {
+//     setNavOpen(false);
+//   };
+
+//   // Run ScrollReveal when the component mounts
+//   React.useEffect(() => {
+//     const scrollRevealOption = {
+//       distance: '50px',
+//       origin: 'bottom',
+//       duration: 1000,
+//     };
+
+//     ScrollReveal().reveal('.content h1', {
+//       ...scrollRevealOption,
+//     });
+//     ScrollReveal().reveal('.content h4', {
+//       ...scrollRevealOption,
+//       delay: 500,
+//     });
+//     ScrollReveal().reveal('.content h2, .content h6, .content form', {
+//       ...scrollRevealOption,
+//       delay: 1000,
+//     });
+//     ScrollReveal().reveal('.content p', {
+//       ...scrollRevealOption,
+//       delay: 1500,
+//     });
+//     ScrollReveal().reveal('.content .socials span', {
+//       ...scrollRevealOption,
+//       delay: 2000,
+//       interval: 500,
+//     });
+//   }, []); // Empty dependency array to run this effect only once
+
+//   return (
+//     <div>
+//       <nav>
+//         <div className="nav__bar">
+//           <div className="nav__header">
+//             <div className="nav__logo">
+//               <a href="#">Travel<span>.com</span></a>
+//             </div>
+//             <div className="nav__menu__btn" id="menu-btn" onClick={toggleNav}>
+//               <i className={navOpen ? 'ri-close-line' : 'ri-menu-line'}></i>
+//             </div>
+//           </div>
+//           <ul className={navOpen ? 'nav__links open' : 'nav__links'} id="nav-links">
+//             <li><a href="#" onClick={closeNav}>HOME</a></li>
+//             <li><a href="#" onClick={closeNav}>ABOUT US</a></li>
+//             <li><a href="#" onClick={closeNav}>BOOKING</a></li>
+//             <li><a href="#" onClick={closeNav}>CONTACT US</a></li>
+//           </ul>
+//         </div>
+//       </nav>
+//       <div className="container">
+//         <div className="content">
+//           <h1>Plan Your<br />Holiday</h1>
+//           <h4>Explore Worldwide</h4>
+//           <h2>GET 20% OFF</h2>
+//           <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
+//           <form action="/">
+//             <input type="text" placeholder="Enter Destination" />
+//             <button><i className="ri-arrow-right-s-line"></i></button>
+//           </form>
+//           <p>
+//             We are passionate about uncovering the wonders of our diverse world
+//             and sharing them with you. Our mission is to inspire a sense of
+//             discovery, and stories that make our planet unique.
+//           </p>
+//           <div className="socials">
+//             <span>
+//               <a href="#"><i className="ri-facebook-fill"></i></a>
+//             </span>
+//             <span>
+//               <a href="#"><i className="ri-twitter-fill"></i></a>
+//             </span>
+//             <span>
+//               <a href="#"><i className="ri-instagram-line"></i></a>
+//             </span>
+//           </div>
+//         </div>
 //       </div>
-//       <motion.h2 className="lg:w-1/2 w-full md:mx-5 mx-3 text-white"  variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="2">
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ex nostrum corporis, illum vel error porro natus quaerat sunt veniam autem culpa vero nulla, consequuntur tempora animi? Laborum, architecto similique.
-//       </motion.h2>
-//     </Title>
-//     <video src={MainVideo} type="video/mp4" autoPlay muted loop />
-//   </VideoContainer>
 //     </div>
 //   );
 // };
 
-// export default CoverVideo;
+// export default App;
 
+// import React from 'react'
+// import "../App.css"
+// const projects = () => {
+//   return (
+//     <div className="body">
 
+//     <div className="container">
+//     <div className="content">
+//       <h1>Plan Your<br />Holiday</h1>
+//       <h4>Explore Worldwide</h4>
+//       <h2>GET 20% OFF</h2>
+//       <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
+//       <form action="/">
+//         <input type="text" placeholder="Enter Destination" />
+//         <button><i className="ri-arrow-right-s-line"></i></button>
+//       </form>
+//       <p>
+//         We are passionate about uncovering the wonders of our diverse world
+//         and sharing them with you. Our mission is to inspire a sense of
+//         discovery, and stories that make our planet unique.
+//       </p>
+//       <div className="socials">
+//         <span>
+//           <a href="#"><i className="ri-facebook-fill"></i></a>
+//         </span>
+//         <span>
+//           <a href="#"><i className="ri-twitter-fill"></i></a>
+//         </span>
+//         <span>
+//           <a href="#"><i className="ri-instagram-line"></i></a>
+//         </span>
+//       </div>
+//     </div>
+//   </div>
+//     </div>
 
+//   )
+// }
 
+// export default projects
 
+import React from "react";
+import "../components/Project.css";
 
-import styled, { ThemeProvider } from "styled-components";
-import { motion } from "framer-motion";
-import { StarsCanvas } from "../components/canvas";
-import { useRef } from "react";
-import React, { useLayoutEffect } from "react";
-
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Carousel from "../components/Carousel";
-import Button from "../components/Button";
-import { dark, light } from "../styles/Themes";
-import { Link } from "react-router-dom";
-
-const Section = styled.section`
-  min-height: 100vh;
-  width: 100%;
-  // background-color: ${(props) => props.theme.text};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;
-const Container = styled.div`
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 70em) {
-    width: 85%;
-  }
-
-  @media (max-width: 64em) {
-    width: 100%;
-    flex-direction: column;
-
-    & > *:last-child {
-      width: 80%;
-    }
-  }
-  @media (max-width: 40em) {
-    & > *:last-child {
-      width: 90%;
-    }
-  }
-`;
-
-const Box = styled.div`
-  width: 100%;
-  height: 100%;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 40em) {
-    min-height: 50vh;
-  }
-`;
-
-const Title = styled.h2`
-  font-size: ${(props) => props.theme.fontxxl};
-  text-transform: capitalize;
-  // color: ${(props) => props.theme.body};
-  align-self: flex-start;
-  width: 80%;
-  margin: 0 auto;
-
-  @media (max-width: 64em) {
-    width: 100%;
-    text-align: center;
-  }
-
-  @media (max-width: 40em) {
-    font-size: ${(props) => props.theme.fontxl};
-  }
-
-  @media (max-width: 30em) {
-    font-size: ${(props) => props.theme.fontlg};
-  }
-`;
-const SubTitle = styled.p`
-  font-size: ${(props) => props.theme.fontlg};
-  // color: ${(props) => props.theme.body};
-  align-self: flex-start;
-  width: 80%;
-  margin: 1rem auto;
-  font-weight: 400;
-
-  @media (max-width: 64em) {
-    width: 100%;
-    text-align: center;
-    font-size: ${(props) => props.theme.fontmd};
-  }
-
-  @media (max-width: 40em) {
-    font-size: ${(props) => props.theme.fontmd};
-  }
-
-  @media (max-width: 30em) {
-    font-size: ${(props) => props.theme.fontsm};
-  }
-`;
-const SubText = styled.p`
-  font-size: ${(props) => props.theme.fontmd};
-  // color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.6)`};
-  align-self: flex-start;
-  width: 80%;
-  margin: 1rem auto;
-  font-weight: 400;
-
-  @media (max-width: 64em) {
-    width: 100%;
-    text-align: center;
-    font-size: ${(props) => props.theme.fontsm};
-  }
-
-  @media (max-width: 40em) {
-    font-size: ${(props) => props.theme.fontsm};
-  }
-
-  @media (max-width: 30em) {
-    font-size: ${(props) => props.theme.fontxs};
-  }
-`;
-const ButtonContainer = styled.div`
-  width: 80%;
-  margin: 1rem auto;
-  display: flex;
-  align-self: flex-start;
-
-  @media (max-width: 64em) {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    button {
-      margin: 0 auto;
-    }
-  }
-`;
-const About = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const ref = useRef(null);
-
-  useLayoutEffect(() => {
-    let element = ref.current;
-    ScrollTrigger.create({
-      trigger: element,
-      start: "top top",
-      end: "bottom top",
-      pin: true,
-      pinSpacing: false,
-      scrub: true,
-    });
-
-    return () => {
-      ScrollTrigger.kill();
-    };
-  }, []);
-  const conatiner = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-  
-      transition: {
-        delayChildren: 2,
-       staggerChildren:0.3,
-      },
-    },
-  };
-  const item = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-    },
-  };
+const projects = () => {
   return (
-    
-    <Section id="about" ref={ref} className="orange-background w-full" variants={conatiner} initial="hidden" animate="show">
-    <StarsCanvas/>
-      <Container>
-        {/* <Box>
-          <Carousel />
-        </Box> */}
-        <div className="">
-        <div className="flex lg:flex-row flex-col  ">
-                  <div
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000"
-                    // className="basis-2/6"
-                  >
-                    <video
-                      muted
-                      loop
-                      playsInline
-                      autoPlay
-                      preload="none"
-                      style={{
-                        clipPath:
-                          "polygon(1px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), 1px calc(100% - 1px))",
-                        visibility: "visible",
-                      }}
-                      data-stop="true"
-                    >
-                      <source
-                        src="https://phenomenonstudio.com/wp-content/uploads/2021/10/home-1.mov"
-                        type='video/mp4; codecs="hvc1"'
-                      />
-                      <source
-                        src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm"
-                        type="video/webm"
-                      />
-                      <source
-                        src="https://phenomenonstudio.com/wp-content/uploads/2021/10/Home-2.webm"
-                        type="video/webm"
-                      />
-                    </video>
-                  </div>
-                </div>
-        </div>
-        <Box>
-          <Title>
-          <motion.p variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4" className="my-5">
-
-            Welcome To
-            <br /> Bay Royal.
-          </motion.p>
-          </Title>
-          <SubTitle>
-            <motion.p className="" variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4" >
-
-            Navigating the business terrain together, One solution at a time Bay
-            Royal International Limited is your trusted partner for achieving
-            exceptional results, From payments, projects, payroll to P.E.O.
-            {/* services, we are ready to work closely with you to achieve your
-            business objectives. */}
-            </motion.p>
-          </SubTitle>
-          <SubText>
-          
-          </SubText>
-          <ButtonContainer>
-            <ThemeProvider theme={light}>
-            {/* <a href="mailto:peter@bayroyalinternational.com">
-              <Button text="Contact Us"  />
-              </a> */}
-              <Link to="/Projects">
-              <Button text="Contact Us"  />
-              </Link>
-              </ThemeProvider>
-
-            {/* <a href="mailto:peter@bayroyalinternational.com">
-              <Button text="Contact Us"  />
-              </a> */}
-            {/* </ThemeProvider> */}
-          </ButtonContainer>
-        </Box>
-      </Container>
-    </Section>
+    <>
+{/*      
+        <div className="body bg-black text-white">
+          <div className="container">
+            <div className="content">
+              <h1>
+                Plan Your
+                <br />
+                Holiday
+              </h1>
+              <h4>Explore Worldwide</h4>
+              <h2>GET 20% OFF</h2>
+              <h6>
+                Winter Voucher Code <span>TravelSafe20</span>
+              </h6>
+              <form action="/">
+                <input type="text" placeholder="Enter Destination" />
+                <button>
+                  <i className="ri-arrow-right-s-line"></i>
+                </button>
+              </form>
+              <p>
+                We are passionate about uncovering the wonders of our diverse
+                world and sharing them with you. Our mission is to inspire a
+                sense of discovery, and stories that make our planet unique.
+              </p>
+            </div>
+          </div>
+        </div> */}
+      
+    </>
   );
 };
 
-export default About;
+export default projects;
