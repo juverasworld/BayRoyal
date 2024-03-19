@@ -58,45 +58,45 @@ const Payroll = () => {
   useEffect(() => {
     // Animation logic here
     const animateElements = () => {
-      TweenMax.to(".first", 1.5, {
+      TweenMax.to(".first", 1, {
         delay: 0.2,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".second", 1.5, {
+      TweenMax.to(".second", 1, {
         delay: 0.4,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".third", 1.5, {
+      TweenMax.to(".third", 1, {
         delay: 0.6,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".logo", 1, {
+      TweenMax.from(".logo", 0.8, {
         delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".menu", 1, {
+      TweenMax.from(".menu", 0.8, {
         delay: 1.2,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".search", 0.8, {
+      TweenMax.from(".search", 0.5, {
         delay: 1.6,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".bag", 1, {
+      TweenMax.from(".bag", 0.8, {
         delay: 1.6,
         opacity: 0,
         x: -20,
@@ -121,6 +121,8 @@ const Payroll = () => {
         x: -20,
         ease: Expo.easeInOut,
       });
+
+      
       TweenMax.staggerFrom(
         ".size ul li",
         0.3,
@@ -139,38 +141,38 @@ const Payroll = () => {
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-right ul li:last-child", 0.6, {
-        delay: 2.4,
+        delay: 1.4,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-img", 1, {
-        delay: 2.4,
+        delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".product-title", 3, {
-        delay: 2.2,
+      TweenMax.from(".product-title", 1, {
+        delay: 0.8,
         opacity: 0,
         y: 50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-img", 1, {
-        delay: 4.2,
+      TweenMax.from(".product-img", 0.8, {
+        delay: 1.2,
         opacity: 0,
         y: -800,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc p", 3, {
-        delay: 4.5,
+      TweenMax.from(".product-desc", 1, {
+        delay: 1.5,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc button", 3, {
-        delay: 6,
+      TweenMax.from(".product-descs", 1, {
+        delay: 1.3,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
@@ -246,12 +248,13 @@ const Payroll = () => {
       >
         <div className="container">
           <div className="contentss">
-            <h1>
+            <h1 className="product-img">
               <motion.span
                 variants={item}
                 data-scroll
                 data-scroll-delay="0.13"
                 data-scroll-speed="4"
+               
               >
                 P
               </motion.span>
@@ -308,6 +311,7 @@ const Payroll = () => {
               {/* Holiday */}
             </h1>
             <motion.h4
+               className="product-title"
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
@@ -319,15 +323,17 @@ const Payroll = () => {
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-desc"
             >
             
-             We are known for <span>Professional HR Services</span> for Indigenous & Multinational companies. We deliever <span>Expert Employee Management</span> Across Sectors.
+             We are known for Professional HR Services for Indigenous & Multinational companies. We deliever Expert Employee Management Across Sectors.
             </motion.h6>
 
             <motion.p
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-descs"
             >
              We offer employee management services using a professionally certified HR team for indigenous and multinational clients across varied sectors.
             </motion.p>

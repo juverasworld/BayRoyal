@@ -8,6 +8,7 @@ import ScrollReveal from "scrollreveal";
 import Logo from "../components/Logo";
 import { TweenMax, Expo, Power3 } from "gsap";
 import { Link } from "react-router-dom";
+import Footer from "../components/Foot";
 // import Footer from "../components/Foot";
 const Projects = () => {
   useEffect(() => {
@@ -60,45 +61,45 @@ const Projects = () => {
   useEffect(() => {
     // Animation logic here
     const animateElements = () => {
-      TweenMax.to(".first", 1.5, {
+      TweenMax.to(".first", 1, {
         delay: 0.2,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".second", 1.5, {
+      TweenMax.to(".second", 1, {
         delay: 0.4,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".third", 1.5, {
+      TweenMax.to(".third", 1, {
         delay: 0.6,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".logo", 1, {
+      TweenMax.from(".logo", 0.8, {
         delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".menu", 1, {
+      TweenMax.from(".menu", 0.8, {
         delay: 1.2,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".search", 0.8, {
+      TweenMax.from(".search", 0.5, {
         delay: 1.6,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".bag", 1, {
+      TweenMax.from(".bag", 0.8, {
         delay: 1.6,
         opacity: 0,
         x: -20,
@@ -123,6 +124,8 @@ const Projects = () => {
         x: -20,
         ease: Expo.easeInOut,
       });
+
+      
       TweenMax.staggerFrom(
         ".size ul li",
         0.3,
@@ -141,38 +144,38 @@ const Projects = () => {
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-right ul li:last-child", 0.6, {
-        delay: 2.4,
+        delay: 1.4,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-img", 1, {
-        delay: 2.4,
+        delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".product-title", 3, {
-        delay: 2.2,
+      TweenMax.from(".product-title", 1, {
+        delay: 0.8,
         opacity: 0,
         y: 50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-img", 1, {
-        delay: 4.2,
+      TweenMax.from(".product-img", 0.8, {
+        delay: 1.5,
         opacity: 0,
         y: -800,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc p", 3, {
-        delay: 4.5,
+      TweenMax.from(".product-desc", 1, {
+        delay: 1.8,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc button", 3, {
-        delay: 6,
+      TweenMax.from(".product-descs", 1, {
+        delay: 2,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
@@ -186,6 +189,7 @@ const Projects = () => {
       // Ensure to clean up any ongoing animations or timers
     };
   }, []);
+
 
   const conatiner = {
     hidden: {
@@ -248,7 +252,7 @@ const Projects = () => {
       >
         <div className="container">
           <div className="contens">
-            <h1>
+            <h1 className="product-img">
               <motion.span
                 variants={item}
                 data-scroll
@@ -321,6 +325,8 @@ const Projects = () => {
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-desc"
+
             >
               All Projects are designed and executed in the finest details with Precision within your agreed Timeline andBudgets
             </motion.h6>
@@ -329,6 +335,8 @@ const Projects = () => {
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-descs"
+
             >
             We deliver all projects using international best practices, timely and within industry matched budgets.
             </motion.p>
@@ -386,7 +394,7 @@ const Projects = () => {
           </div>
         </div>
       </footer>
-      {/* <Footer/> */}
+  <Footer/>
     </body>
   );
 };

@@ -58,45 +58,45 @@ const Payment = () => {
   useEffect(() => {
     // Animation logic here
     const animateElements = () => {
-      TweenMax.to(".first", 1.5, {
+      TweenMax.to(".first", 1, {
         delay: 0.2,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".second", 1.5, {
+      TweenMax.to(".second", 1, {
         delay: 0.4,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.to(".third", 1.5, {
+      TweenMax.to(".third", 1, {
         delay: 0.6,
         left: "-100%",
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".logo", 1, {
+      TweenMax.from(".logo", 0.8, {
         delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".menu", 1, {
+      TweenMax.from(".menu", 0.8, {
         delay: 1.2,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".search", 0.8, {
+      TweenMax.from(".search", 0.5, {
         delay: 1.6,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".bag", 1, {
+      TweenMax.from(".bag", 0.8, {
         delay: 1.6,
         opacity: 0,
         x: -20,
@@ -141,38 +141,38 @@ const Payment = () => {
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-right ul li:last-child", 0.6, {
-        delay: 2.4,
+        delay: 1.4,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
       TweenMax.from(".bottom-img", 1, {
-        delay: 2.4,
+        delay: 1,
         opacity: 0,
         x: -20,
         ease: Expo.easeInOut,
       });
 
-      TweenMax.from(".product-title", 3, {
-        delay: 2.2,
+      TweenMax.from(".product-title", 1, {
+        delay: 0.8,
         opacity: 0,
         y: 50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-img", 1, {
-        delay: 4.2,
+      TweenMax.from(".product-img", 0.8, {
+        delay: 1.5,
         opacity: 0,
         y: -800,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc", 3, {
-        delay: 4.5,
+      TweenMax.from(".product-desc", 1, {
+        delay: 1.8,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-descs", 3, {
-        delay: 6,
+      TweenMax.from(".product-descs", 1, {
+        delay: 2,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,

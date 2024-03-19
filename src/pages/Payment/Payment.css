@@ -57,7 +57,18 @@ nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
-  background-color: var(--primary-color);
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
+    /* padding: 70px 0; */
   z-index: 9;
 }
 
@@ -73,7 +84,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
+    /* padding: 70px 0; */
 }
 
 .nav__logo a {
@@ -322,8 +344,19 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: rgba(1, 19, 27, 1);
+	background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
     /* padding: 70px 0; */
+    padding: 70px 0;
 }
 .footer-col{
    width: 25%;

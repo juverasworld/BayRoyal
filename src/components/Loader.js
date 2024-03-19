@@ -14,7 +14,7 @@ import Mab from "./Mab";
 import { motion } from "framer-motion";
 // import { slideIn } from "../../utils/motion";
 // import { ThemeProvider } from "styled-components";
-
+// import "../pages/Payment/Payment.css"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -172,7 +172,57 @@ const Loader = () => {
  <Team/> */}
                   {/* <Faq /> */}
                   <div id="contact">
-                    <Footer />
+                  <footer class="footer">
+        <div class="contains">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Lagos</h4>
+              <ul>
+                <li> 6b Saka Jojo Street, </li>
+                <li>Off Adeola Odeku,Off</li>
+                <li>Ideja, Victoria Island</li>
+                <li>Lagos, Nigeria</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Abuja</h4>
+              <ul>
+                <li>22 Kumasi, Crescent,</li>
+                <li>Wuse 2 Federal,</li>
+                <li>Capitial Territory</li>
+                <li>Abuja, Nigeria</li>
+                {/* <li><a href="#">payment options</a></li> */}
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Accra</h4>
+              <ul>
+                <li>Regus Building,</li>
+                <li>5 Roman Road,</li>
+                <li>Off Borstal Ave Lane.</li>
+                <li>Accra</li>
+                <li>
+                  {" "}
+                  <a href="tel:+233 541 604 192">P:+233 541 604 192</a>{" "}
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Nairobi</h4>
+              <ul>
+                <li>Windsor House,</li>
+                <li>University way,</li>
+                <li>Muindi Mbugu Street, </li>
+                <li>Nairobi, Kenya.</li>
+                <li>
+                  {" "}
+                  <a href="tel:+233 541 604 192">P:+233 541 604 192</a>{" "}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
                   </div>
                 </div>
                 <ScrollToTop />
