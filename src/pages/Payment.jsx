@@ -1,8 +1,11 @@
 // import React from 'react'
 import "../components/Payment.css";
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+
 import ScrollReveal from "scrollreveal";
-import Logo from "../components/Logo"
+import Logo from "../components/Logo";
+import { TweenMax, Expo, Power3 } from "gsap";
 const Payment = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -51,14 +54,167 @@ const Payment = () => {
       navLinks.removeEventListener("click", handleNavClick);
     };
   }, []);
+  useEffect(() => {
+    // Animation logic here
+    const animateElements = () => {
+      TweenMax.to(".first", 1.5, {
+        delay: 0.2,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
 
+      TweenMax.to(".second", 1.5, {
+        delay: 0.4,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".third", 1.5, {
+        delay: 0.6,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".logo", 1, {
+        delay: 1,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu", 1, {
+        delay: 1.2,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".search", 0.8, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".bag", 1, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1,
+        {
+          delay: 2,
+          opacity: 0,
+          x: -20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(".size", 1, {
+        delay: 1.8,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(
+        ".size ul li",
+        0.3,
+        {
+          delay: 2,
+          opacity: 0,
+          y: 20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
+      TweenMax.from(".bottom-right ul li:first-child", 0.5, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-right ul li:last-child", 0.6, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-img", 1, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".product-title", 3, {
+        delay: 2.2,
+        opacity: 0,
+        y: 50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-img", 1, {
+        delay: 4.2,
+        opacity: 0,
+        y: -800,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc p", 3, {
+        delay: 4.5,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc button", 3, {
+        delay: 6,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+    };
+
+    animateElements();
+
+    // Clean up animations on unmount
+    return () => {
+      // Ensure to clean up any ongoing animations or timers
+    };
+  }, []);
+
+  const conatiner = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+
+      transition: {
+        delayChildren: 2,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+  const item = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+    },
+  };
   return (
     <body>
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
       <nav>
         <div class="nav__bar">
           <div class="nav__header">
             <div class="nav__logo">
-            <Logo/>
+              <Logo />
             </div>
             <div class="nav__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
@@ -81,26 +237,102 @@ const Payment = () => {
         </div>
       </nav>
 
-      <div className="body">
+      <div
+        className="body"
+        variants={conatiner}
+        initial="hidden"
+        animate="show"
+      >
         <div className="container">
           <div className="contents">
             <h1>
-              Payment
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.13"
+                data-scroll-speed="4"
+              >
+                P
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.9"
+                data-scroll-speed="4"
+              >
+                A
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.06"
+                data-scroll-speed="4"
+              >
+                Y
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                M
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                E
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                N
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.4"
+                data-scroll-speed="4"
+              >
+                T
+              </motion.span>
+              {/* Payment */}
               <br />
               {/* Holiday */}
             </h1>
-            <h4>Our Payment</h4>
+            <motion.h4
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
+              Our Payment
+            </motion.h4>
             {/* <h2>GET 20% OFF</h2> */}
-            <h6>
-              From <span>secure payment processing</span>  to adopting new technologies like
-              <span>mobile payments</span> and <span>cryptocurrencies,</span> we provide comprehensive
-              support every step of the way. 
-            </h6>
+            <motion.h6
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
+              From <span>secure payment processing</span> to adopting new
+              technologies like
+              <span>mobile payments</span> and <span>cryptocurrencies,</span> we
+              provide comprehensive support every step of the way.
+            </motion.h6>
 
-            <p>
+            <motion.p
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
               We work with clients to assist them keep pace, capture and develop
               responses to the rapidly changing payments landscape
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
@@ -152,7 +384,6 @@ const Payment = () => {
                 </li>
               </ul>
             </div>
-            
           </div>
         </div>
       </footer>
