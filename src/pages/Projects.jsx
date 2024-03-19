@@ -1,5 +1,6 @@
 // import React from 'react'
 import "../components/Payroll.css";
+// import "./Payment/Payment.css"
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -7,28 +8,29 @@ import ScrollReveal from "scrollreveal";
 import Logo from "../components/Logo";
 import { TweenMax, Expo, Power3 } from "gsap";
 import { Link } from "react-router-dom";
-const Payment = () => {
+// import Footer from "../components/Foot";
+const Projects = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
-    const navinLinks = document.getElementById("navin-links");
+    const navLinks = document.getElementById("nav-links");
     const menuBtnIcon = menuBtn.querySelector("i");
 
     const handleMenuClick = () => {
-      navinLinks.classList.toggle("open");
-      const isOpen = navinLinks.classList.contains("open");
+      navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.contains("open");
       menuBtnIcon.setAttribute(
         "class",
         isOpen ? "ri-close-line" : "ri-menu-line"
       );
     };
 
-    const handlenavinClick = () => {
-      navinLinks.classList.remove("open");
+    const handlenavClick = () => {
+      navLinks.classList.remove("open");
       menuBtnIcon.setAttribute("class", "ri-menu-line");
     };
 
     menuBtn.addEventListener("click", handleMenuClick);
-    navinLinks.addEventListener("click", handlenavinClick);
+    navLinks.addEventListener("click", handlenavClick);
 
     const scrollRevealOption = {
       distance: "50px",
@@ -52,7 +54,7 @@ const Payment = () => {
     // Cleanup function to remove event listeners
     return () => {
       menuBtn.removeEventListener("click", handleMenuClick);
-      navinLinks.removeEventListener("click", handlenavinClick);
+      navLinks.removeEventListener("click", handlenavClick);
     };
   }, []);
   useEffect(() => {
@@ -211,17 +213,17 @@ const Payment = () => {
       <div class="overlay first"></div>
       <div class="overlay second"></div>
       <div class="overlay third"></div>
-      <div className="navin">
-        <div class="navin__bar">
-          <div class="navin__header">
-            <div class="navin__logo">
+      <div className="nav">
+        <div class="nav__bar">
+          <div class="nav__header">
+            <div class="nav__logo">
               <Logo />
             </div>
-            <div class="navin__menu__btn" id="menu-btn">
+            <div class="nav__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
             </div>
           </div>
-          <ul class="navin__links" id="navin-links">
+          <ul class="nav__links" id="nav-links">
             <li>
               <Link to="/">HOME</Link>
             </li>
@@ -232,20 +234,20 @@ const Payment = () => {
               <Link to="/Payroll">PAYROLL</Link>
             </li>
             <li>
-              <Link to="/Project">PROJECT</Link>
+              <Link to="/Projects">PROJECT</Link>
             </li>
           </ul>
         </div>
       </div>
 
       <div
-        className="bg2"
+        className="bg3"
         variants={conatiner}
         initial="hidden"
         animate="show"
       >
         <div className="container">
-          <div className="contents">
+          <div className="contens">
             <h1>
               <motion.span
                 variants={item}
@@ -261,7 +263,7 @@ const Payment = () => {
                 data-scroll-delay="0.9"
                 data-scroll-speed="4"
               >
-                A
+                R
               </motion.span>
               <motion.span
                 variants={item}
@@ -269,7 +271,7 @@ const Payment = () => {
                 data-scroll-delay="0.06"
                 data-scroll-speed="4"
               >
-                Y
+                O
               </motion.span>
               <motion.span
                 variants={item}
@@ -277,7 +279,7 @@ const Payment = () => {
                 data-scroll-delay="0.04"
                 data-scroll-speed="4"
               >
-                M
+                J
               </motion.span>
               <motion.span
                 variants={item}
@@ -293,7 +295,7 @@ const Payment = () => {
                 data-scroll-delay="0.04"
                 data-scroll-speed="4"
               >
-                N
+                C
               </motion.span>
               <motion.span
                 variants={item}
@@ -312,7 +314,7 @@ const Payment = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              Our Payment
+              {/* Our Payment */}
             </motion.h4>
             {/* <h2>GET 20% OFF</h2> */}
             <motion.h6
@@ -320,10 +322,7 @@ const Payment = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              From <span>secure payment processing</span> to adopting new
-              technologies like
-              <span>mobile payments</span> and <span>cryptocurrencies,</span> we
-              provide comprehensive support every step of the way.
+              All Projects are designed and executed in the finest details with Precision within your agreed Timeline andBudgets
             </motion.h6>
 
             <motion.p
@@ -331,8 +330,7 @@ const Payment = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              We work with clients to assist them keep pace, capture and develop
-              responses to the rapidly changing payments landscape
+            We deliver all projects using international best practices, timely and within industry matched budgets.
             </motion.p>
           </div>
         </div>
@@ -388,8 +386,9 @@ const Payment = () => {
           </div>
         </div>
       </footer>
+      {/* <Footer/> */}
     </body>
   );
 };
 
-export default Payment;
+export default Projects;

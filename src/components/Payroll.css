@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #fff;
+  --primary-color: rgba(1, 19, 27, 1);
   --secondary-color: #ff0a0a;
   --white: #ffffff;
   --max-width: 1200px;
@@ -29,7 +29,7 @@ a {
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
-.bg2 {
+.bg3 {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   /* background-image: url("../assets/4.png"); */
@@ -49,7 +49,7 @@ a {
   margin-inline: auto;
 }
 
-.navin {
+.nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
@@ -57,13 +57,13 @@ a {
   z-index: 9;
 }
 
-.navin__bar {
+.nav__bar {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
 }
 
-.navin__header {
+.nav__header {
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -72,23 +72,23 @@ a {
   background-color: var(--primary-color);
 }
 
-.navin__logo a {
+.nav__logo a {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--secondary-color);
 }
 
-.navin__logo a span {
+.nav__logo a span {
   color: var(--secondary-color);
 }
 
-.navin__menu__btn {
+.nav__menu__btn {
   font-size: 1.5rem;
-  color: var(--secondary-color);
+  color: var(--white);
   cursor: pointer;
 }
 
-.navin__links {
+.nav__links {
   position: absolute;
   top: 60px;
   left: 0;
@@ -106,21 +106,21 @@ a {
   transform: translateY(-100%);
 }
 
-.navin__links.open {
+.nav__links.open {
   transform: translateY(0);
 }
 
-.navin__links a {
+.nav__links a {
   white-space: nowrap;
-  color:var(--secondary-color);
+  color:var(--white);
   transition: 0.3s;
 }
 
-.navin__links a:hover {
+.nav__links a:hover {
   color: var(--secondary-color);
 }
 
-.contents {
+.contens {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
@@ -134,18 +134,18 @@ a {
   text-align: center;
 }
 
-.contents::before {
+.contens::before {
   position: absolute;
   content: "";
   top: 0;
   right: 0;
   width: 100vw;
   height: 100%;
-  background-color: rgba(255, 215, 0, 0.7);
+  background-color: rgba(96, 96, 94, 0.7);
   z-index: -1;
 }
 
-.contents h1 {
+.contens h1 {
   margin-bottom: 2rem;
   font-size: 4rem;
   font-weight: 700;
@@ -153,33 +153,33 @@ a {
   color: var(--white);
 }
 
-.contents h4 {
+.contens h4 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 200;
   color: var(--secondary-color);
 }
 
-.contents h2 {
+.contens h2 {
   margin-bottom: 5px;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--white);
 }
 
-.contents h6 {
+.contens h6 {
   margin-bottom: 1rem;
   font-size: 0.8rem;
   font-weight: 400;
   color: #fff;
 }
 
-.contents h6 span {
+.contens h6 span {
     color: var(--secondary-color);
   font-weight: 600;
 }
 
-.contents form {
+.contens form {
   margin-bottom: 2rem;
   width: 100%;
   max-width: 450px;
@@ -189,7 +189,7 @@ a {
   background-color: var(--white);
 }
 
-.contents input {
+.contens input {
   width: 100%;
   padding: 0.5rem 0.75rem;
   outline: none;
@@ -199,7 +199,7 @@ a {
   background-color: transparent;
 }
 
-.contents button {
+.contens button {
   padding: 5px 20px;
   outline: none;
   border: none;
@@ -209,7 +209,7 @@ a {
   cursor: pointer;
 }
 
-.contents p {
+.contens p {
   margin-bottom: 4rem;
   font-weight: 200;
   color: var(--white);
@@ -232,27 +232,27 @@ a {
 }
 
 @media (width > 540px) {
-  .contents h1 {
+  .contens h1 {
     font-size: 4.5rem;
     line-height: 4.5rem;
   }
 
-  .contents h4 {
+  .contens h4 {
     font-size: 1.75rem;
   }
 
-  .contents h2 {
+  .contens h2 {
     font-size: 1.75rem;
   }
 }
 
 @media (width > 768px) {
-  navin {
+  nav {
     position: static;
     background-color: #fff;
   }
 
-  .navin__bar {
+  .nav__bar {
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
@@ -260,16 +260,16 @@ a {
     gap: 2rem;
   }
 
-  .navin__header {
+  .nav__header {
     padding: 0;
     background-color: transparent;
   }
 
-  .navin__menu__btn {
+  .nav__menu__btn {
     display: none;
   }
 
-  .navin__links {
+  .nav__links {
     position: static;
     padding: 0;
     flex-direction: row;
@@ -279,27 +279,27 @@ a {
     z-index: unset;
   }
 
-  .contents {
+  .contens {
     padding: 5rem 1rem;
     align-items: flex-start;
     text-align: left;
     margin-inline-start: unset;
   }
 
-  .contents h1 {
+  .contens h1 {
     font-size: 5rem;
     line-height: 5rem;
   }
 
-  .contents h4 {
+  .contens h4 {
     font-size: 2rem;
   }
 
-  .contents h2 {
+  .contens h2 {
     font-size: 2rem;
   }
 
-  .contents form {
+  .contens form {
     margin-inline-start: unset;
   }
 }
@@ -318,7 +318,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #fff;
+	background-color: rgba(1, 19, 27, 1);
     /* padding: 70px 0; */
 }
 .footer-col{

@@ -232,7 +232,7 @@ const Payment = () => {
               <Link to="/Payroll">PAYROLL</Link>
             </li>
             <li>
-              <Link to="/Project">PROJECT</Link>
+              <Link to="/Projects">PROJECT</Link>
             </li>
           </ul>
         </div>
