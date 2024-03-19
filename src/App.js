@@ -31,6 +31,7 @@ import Hero from "./components/Comp";
 import Ana from "./components/Ana";
 import Load from "./components/Loader";
 import Loader from "./components/Loader";
+import Payroll from "./pages/Payroll";
 
 
 
@@ -43,6 +44,7 @@ function App() {
        <Route path='/' element={<Loader/>}/>
        <Route path='/Projects' element={<Projects/>}/>
        <Route path='/Payment' element={<Payment/>}/>
+       <Route path='/Payroll' element={<Payroll/>}/>
        {/* <Route path='/services' element={<OurService/>}/> */}
    </Routes>
          

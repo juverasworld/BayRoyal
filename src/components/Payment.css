@@ -18,10 +18,24 @@ a {
   transition: 0.3s;
 }
 
-body {
+.body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   background-image: url("https://img.freepik.com/premium-photo/woman-holding-credit-card-phone-with-green-card-her-hand-generative-ai_868797-570.jpg?w=900");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+.bg1 {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  /* background-image: url("../assets/4.png"); */
+  background-image: url("../assets/4.webp");
+  /* background-image: url("../assets/5.webp"); */
+  /* background-image: url("../assets/6.webp"); */
+  /* background-image: url("../assets/"); */
+  /* background-color: #ff6f00; */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
