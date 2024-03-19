@@ -7,6 +7,8 @@ import Twitter from "../Icons/Twitter";
 import Instagram from "../Icons/Instagram";
 import Facebook from "../Icons/Facebook";
 import LinkedIn from "../Icons/LinkedIn";
+import Phone from "../Icons/Phone";
+import Gmail from "../Icons/Gmail";
 
 const Section = styled.section`
   // min-height: 100vh;
@@ -138,27 +140,25 @@ const Footer = () => {
           <Logo />
           <IconList>
             <a
-              href="https://www.linkedin.com/obasi-vera-a8b155198"
+              href="https://linkedin.com/company/bayroyal-international-limited"
               target={"_blank"}
               rel="noopener"
             >
               <LinkedIn />
             </a>
-            <a
-              href="https://twitter.com/Vera_Ifebuche"
-              target={"_blank"}
+            {/* <a
+                  href="tel:+2348039123546"
+             
               rel="noopener"
             >
-              <Twitter />
-            </a>
-            <a href="https://facebook.com" target={"_blank"} rel="noopener">
+              <Phone/>
+            </a> */}
+            <a href="https://www.facebook.com/BayRoyalLtd/" target={"_blank"} rel="noopener">
               <Facebook />
             </a>
-            <a href="https://Instagram.com" target={"_blank"} rel="noopener">
-              <Instagram />
-            </a>
-            <a href="https://facebook.com" target={"_blank"} rel="noopener">
-              <Facebook />
+           
+            <a href="mailto:peter@bayroyalinternational.com">
+              <Gmail />
             </a>
           </IconList>
         </Left>

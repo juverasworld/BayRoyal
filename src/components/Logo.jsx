@@ -64,7 +64,7 @@ const Logo = () => {
        <Link to="/">
         <img 
         
-        src="/new-logo.png" alt="" className='h-10'  />
+        src="/new-logo.png" alt="" className='md:h-10 h-[70px]'  />
        </Link>
  
   )

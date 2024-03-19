@@ -7,6 +7,7 @@ import ScrollReveal from "scrollreveal";
 import Logo from "../components/Logo";
 import { TweenMax, Expo, Power3 } from "gsap";
 import { Link } from "react-router-dom";
+import Footer from "../components/Foot";
 const Payroll = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -391,6 +392,7 @@ const Payroll = () => {
           </div>
         </div>
       </footer>
+      <Footer/>
     </main>
   );
 };
