@@ -232,7 +232,7 @@ const About = () => {
           <motion.p variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4" className="my-5">
 
             Welcome To
-            <br /> Bay Royal.
+            <br /> Bay Royal
           </motion.p>
           </Title>
           <SubTitle>
@@ -240,7 +240,7 @@ const About = () => {
 
             Navigating the business terrain together, One solution at a time Bay
             Royal International Limited is your trusted partner for achieving
-            exceptional results, From payments, projects, payroll to P.E.O.
+            exceptional results, From Payments, Projects, Payroll to P.E.O.
             {/* services, we are ready to work closely with you to achieve your
             business objectives. */}
             </motion.p>

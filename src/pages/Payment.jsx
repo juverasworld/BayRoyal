@@ -349,18 +349,18 @@ const Payment = () => {
             <div class="footer-col">
               <h4>Lagos</h4>
               <ul>
-                <li> 6b Saka Jojo Street, </li>
-                <li>Off Adeola Odeku,Off</li>
-                <li>Ideja, Victoria Island</li>
+                <li> 6b Bendel Close </li>
+                {/* <li>Off Adeola Odeku,Off</li> */}
+                <li> Victoria Island</li>
                 <li>Lagos, Nigeria</li>
               </ul>
             </div>
             <div class="footer-col">
               <h4>Abuja</h4>
               <ul>
-                <li>22 Kumasi, Crescent,</li>
-                <li>Wuse 2 Federal,</li>
-                <li>Capitial Territory</li>
+                <li>22 Kumasi Crescent,</li>
+                <li>Wuse 2 </li>
+                <li>Federal Capitial Territory</li>
                 <li>Abuja, Nigeria</li>
                 {/* <li><a href="#">payment options</a></li> */}
               </ul>
