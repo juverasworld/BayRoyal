@@ -121,6 +121,8 @@ const Payment = () => {
         x: -20,
         ease: Expo.easeInOut,
       });
+
+      
       TweenMax.staggerFrom(
         ".size ul li",
         0.3,
@@ -163,13 +165,13 @@ const Payment = () => {
         y: -800,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc p", 3, {
+      TweenMax.from(".product-desc", 3, {
         delay: 4.5,
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut,
       });
-      TweenMax.from(".product-desc button", 3, {
+      TweenMax.from(".product-descs", 3, {
         delay: 6,
         opacity: 0,
         y: -50,
@@ -246,7 +248,7 @@ const Payment = () => {
       >
         <div className="container">
           <div className="contents">
-            <h1>
+            <h1 className="product-img">
               <motion.span
                 variants={item}
                 data-scroll
@@ -308,6 +310,7 @@ const Payment = () => {
               {/* Holiday */}
             </h1>
             <motion.h4
+            className="product-title"
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
@@ -319,10 +322,11 @@ const Payment = () => {
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-desc"
             >
-              From <span>secure payment processing</span> to adopting new
+              From secure payment processing to adopting new
               technologies like
-              <span>mobile payments</span> and <span>cryptocurrencies,</span> we
+              mobile payments and cryptocurrencies, we
               provide comprehensive support every step of the way.
             </motion.h6>
 
@@ -330,6 +334,7 @@ const Payment = () => {
               data-scroll
               data-scroll-delay="0.04"
               data-scroll-speed="2"
+              className="product-descs"
             >
               We work with clients to assist them keep pace, capture and develop
               responses to the rapidly changing payments landscape

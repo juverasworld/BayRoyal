@@ -17,6 +17,12 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
+/* .product-title {
+  color: #f2d16b;
+  font-weight: 900;
+  letter-spacing: -10px;
+  font-size: 280px;
+} */
 
 .body {
   font-family: "Montserrat", sans-serif;
