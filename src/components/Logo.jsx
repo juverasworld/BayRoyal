@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 const LogoText = styled.h1`
-font-family: "Akaya Telivigala", cursive;
-// font-size: ${props=>props.theme.fontxxxl};
+
 color: ${props=>props.theme.text};  
 transition: all 0.2 ease;
 img{
   width:200px;
+  // height:50px;
 }
 &:hover{
     transform:scale(1.1);
@@ -60,13 +60,13 @@ const Logo = () => {
     },
   };
   return (
-    <LogoText>
+   
        <Link to="/">
         <img 
         
-        src="/new-logo.png" alt="" className='border-2'  />
+        src="/new-logo.png" alt="" className='h-10'  />
        </Link>
-    </LogoText>
+ 
   )
 }
 

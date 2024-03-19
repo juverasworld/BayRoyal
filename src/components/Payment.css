@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #225e69;
+  --primary-color: rgba(1, 19, 27, 1);
   --secondary-color: #ff6f00;
   --white: #ffffff;
   --max-width: 1200px;
@@ -321,7 +321,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+	background-color: #ff6f00;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -329,7 +329,7 @@ ul{
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
-.footer-col ul li a{
+.footer-col ul li {
 	font-size: 16px;
 	text-transform: capitalize;
 	color: #ffffff;
@@ -374,5 +374,37 @@ ul{
 }
 
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+}
 
 
+
+
+@media screen and (max-width: 768px) {
+  .dropdown:hover .dropdown-content {
+      display: none;
+  }
+}

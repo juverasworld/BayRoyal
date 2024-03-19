@@ -2,6 +2,7 @@
 import "../components/Payment.css";
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import Logo from "../components/Logo"
 const Payment = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -57,9 +58,7 @@ const Payment = () => {
         <div class="nav__bar">
           <div class="nav__header">
             <div class="nav__logo">
-              <a href="#">
-                Travel<span>.com</span>
-              </a>
+            <Logo/>
             </div>
             <div class="nav__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
@@ -91,7 +90,7 @@ const Payment = () => {
               {/* Holiday */}
             </h1>
             <h4>Our Payment</h4>
-            <h2>GET 20% OFF</h2>
+            {/* <h2>GET 20% OFF</h2> */}
             <h6>
               From <span>secure payment processing</span>  to adopting new technologies like
               <span>mobile payments</span> and <span>cryptocurrencies,</span> we provide comprehensive
