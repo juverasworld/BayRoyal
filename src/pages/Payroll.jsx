@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "scrollreveal";
 import Logo from "../components/Logo";
 import { TweenMax, Expo, Power3 } from "gsap";
+import { Link } from "react-router-dom";
 const Payroll = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -221,17 +222,17 @@ const Payroll = () => {
             </div>
           </div>
           <ul class="navs__links" id="navs-links">
-            <li>
-              <a href="#">HOME</a>
+          <li>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="#">ABOUT US</a>
+              <Link to="/Payment">PAYMENT</Link>
             </li>
             <li>
-              <a href="#">BOOKING</a>
+              <Link to="/Payroll">PAYROLL</Link>
             </li>
             <li>
-              <a href="#">CONTACT US</a>
+              <Link to="/Project">PROJECT</Link>
             </li>
           </ul>
         </div>

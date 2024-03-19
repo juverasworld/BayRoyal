@@ -239,7 +239,7 @@ const Payment = () => {
       </div>
 
       <div
-        className="body"
+        className="bg2"
         variants={conatiner}
         initial="hidden"
         animate="show"

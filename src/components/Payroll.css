@@ -29,13 +29,13 @@ a {
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
-.bg1 {
+.bg2 {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   /* background-image: url("../assets/4.png"); */
-  background-image: url("../assets/4.webp");
+  /* background-image: url("../assets/4.webp"); */
   /* background-image: url("../assets/5.webp"); */
-  /* background-image: url("../assets/6.webp"); */
+  background-image: url("../assets/6.webp");
   /* background-image: url("../assets/"); */
   /* background-color: #ff6f00; */
   background-position: center center;
