@@ -49,7 +49,7 @@ a {
   margin-inline: auto;
 }
 
-.nav {
+.navin {
   position: fixed;
   isolation: isolate;
   width: 100%;
@@ -57,13 +57,13 @@ a {
   z-index: 9;
 }
 
-.nav__bar {
+.navin__bar {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
 }
 
-.nav__header {
+.navin__header {
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -72,23 +72,23 @@ a {
   background-color: var(--primary-color);
 }
 
-.nav__logo a {
+.navin__logo a {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--secondary-color);
 }
 
-.nav__logo a span {
+.navin__logo a span {
   color: var(--secondary-color);
 }
 
-.nav__menu__btn {
+.navin__menu__btn {
   font-size: 1.5rem;
   color: var(--secondary-color);
   cursor: pointer;
 }
 
-.nav__links {
+.navin__links {
   position: absolute;
   top: 60px;
   left: 0;
@@ -106,17 +106,17 @@ a {
   transform: translateY(-100%);
 }
 
-.nav__links.open {
+.navin__links.open {
   transform: translateY(0);
 }
 
-.nav__links a {
+.navin__links a {
   white-space: nowrap;
   color:var(--secondary-color);
   transition: 0.3s;
 }
 
-.nav__links a:hover {
+.navin__links a:hover {
   color: var(--secondary-color);
 }
 
@@ -247,12 +247,12 @@ a {
 }
 
 @media (width > 768px) {
-  nav {
+  navin {
     position: static;
     background-color: #fff;
   }
 
-  .nav__bar {
+  .navin__bar {
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
@@ -260,16 +260,16 @@ a {
     gap: 2rem;
   }
 
-  .nav__header {
+  .navin__header {
     padding: 0;
     background-color: transparent;
   }
 
-  .nav__menu__btn {
+  .navin__menu__btn {
     display: none;
   }
 
-  .nav__links {
+  .navin__links {
     position: static;
     padding: 0;
     flex-direction: row;

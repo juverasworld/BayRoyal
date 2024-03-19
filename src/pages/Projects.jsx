@@ -10,25 +10,25 @@ import { Link } from "react-router-dom";
 const Payment = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
-    const navLinks = document.getElementById("nav-links");
+    const navinLinks = document.getElementById("navin-links");
     const menuBtnIcon = menuBtn.querySelector("i");
 
     const handleMenuClick = () => {
-      navLinks.classList.toggle("open");
-      const isOpen = navLinks.classList.contains("open");
+      navinLinks.classList.toggle("open");
+      const isOpen = navinLinks.classList.contains("open");
       menuBtnIcon.setAttribute(
         "class",
         isOpen ? "ri-close-line" : "ri-menu-line"
       );
     };
 
-    const handleNavClick = () => {
-      navLinks.classList.remove("open");
+    const handlenavinClick = () => {
+      navinLinks.classList.remove("open");
       menuBtnIcon.setAttribute("class", "ri-menu-line");
     };
 
     menuBtn.addEventListener("click", handleMenuClick);
-    navLinks.addEventListener("click", handleNavClick);
+    navinLinks.addEventListener("click", handlenavinClick);
 
     const scrollRevealOption = {
       distance: "50px",
@@ -52,7 +52,7 @@ const Payment = () => {
     // Cleanup function to remove event listeners
     return () => {
       menuBtn.removeEventListener("click", handleMenuClick);
-      navLinks.removeEventListener("click", handleNavClick);
+      navinLinks.removeEventListener("click", handlenavinClick);
     };
   }, []);
   useEffect(() => {
@@ -211,17 +211,17 @@ const Payment = () => {
       <div class="overlay first"></div>
       <div class="overlay second"></div>
       <div class="overlay third"></div>
-      <div className="nav">
-        <div class="nav__bar">
-          <div class="nav__header">
-            <div class="nav__logo">
+      <div className="navin">
+        <div class="navin__bar">
+          <div class="navin__header">
+            <div class="navin__logo">
               <Logo />
             </div>
-            <div class="nav__menu__btn" id="menu-btn">
+            <div class="navin__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
             </div>
           </div>
-          <ul class="nav__links" id="nav-links">
+          <ul class="navin__links" id="navin-links">
             <li>
               <Link to="/">HOME</Link>
             </li>
