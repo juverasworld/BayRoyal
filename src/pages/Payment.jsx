@@ -1,11 +1,12 @@
 // import React from 'react'
-import "../components/Payment.css";
+import "./Payment/Payment.css";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import ScrollReveal from "scrollreveal";
 import Logo from "../components/Logo";
 import { TweenMax, Expo, Power3 } from "gsap";
+import { Link } from "react-router-dom";
 const Payment = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -222,16 +223,16 @@ const Payment = () => {
           </div>
           <ul class="nav__links" id="nav-links">
             <li>
-              <a href="#">HOME</a>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="#">ABOUT US</a>
+              <Link to="/Payment">PAYMENT</Link>
             </li>
             <li>
-              <a href="#">BOOKING</a>
+              <Link to="/Payroll">PAYROLL</Link>
             </li>
             <li>
-              <a href="#">CONTACT US</a>
+              <Link to="/Project">PROJECT</Link>
             </li>
           </ul>
         </div>

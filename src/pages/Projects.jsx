@@ -1,534 +1,395 @@
-// // import React, { useEffect } from 'react';
-// // import { TweenMax, Expo, Power3 } from 'gsap';
-// // import "../App.css"
-// // // const AdidasLandingPage = () => {
-// // //     useEffect(() => {
-// // //         // Animation logic here
-// // //         const animateElements = () => {
-// // //             TweenMax.to('.first', 1.5, {
-// // //                 delay: 0.2,
-// // //                 left: '-100%',
-// // //                 ease: Expo.easeInOut
-// // //             });
+// import React from 'react'
+import "../components/Payroll.css";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
-// // //       TweenMax.to('.second', 1.5, {
-// // //           delay: .4,
-// // //           left: '-100%',
-// // //           ease: Expo.easeInOut
-// // //       })
+import ScrollReveal from "scrollreveal";
+import Logo from "../components/Logo";
+import { TweenMax, Expo, Power3 } from "gsap";
+import { Link } from "react-router-dom";
+const Payment = () => {
+  useEffect(() => {
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
 
-// // //       TweenMax.to('.third', 1.5, {
-// // //           delay: .6,
-// // //           left: '-100%',
-// // //           ease: Expo.easeInOut
-// // //       })
+    const handleMenuClick = () => {
+      navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.contains("open");
+      menuBtnIcon.setAttribute(
+        "class",
+        isOpen ? "ri-close-line" : "ri-menu-line"
+      );
+    };
 
-// // //       TweenMax.from('.logo', 1, {
-// // //           delay: 1,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.menu', 1, {
-// // //           delay: 1.2,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
+    const handleNavClick = () => {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    };
 
-// // //       TweenMax.from('.search', .8, {
-// // //           delay: 1.6,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
+    menuBtn.addEventListener("click", handleMenuClick);
+    navLinks.addEventListener("click", handleNavClick);
 
-// // //       TweenMax.from('.bag', 1, {
-// // //           delay: 1.6,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
+    const scrollRevealOption = {
+      distance: "50px",
+      origin: "bottom",
+      duration: 1000,
+    };
 
-// // //       TweenMax.staggerFrom('.media ul li', 1, {
-// // //           delay: 2,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Power3.easeInOut
-// // //       }, 0.08)
+    ScrollReveal().reveal(".content h1", { ...scrollRevealOption });
+    ScrollReveal().reveal(".content h4", { ...scrollRevealOption, delay: 500 });
+    ScrollReveal().reveal(".content h2, .content h6, .content form", {
+      ...scrollRevealOption,
+      delay: 1000,
+    });
+    ScrollReveal().reveal(".content p", { ...scrollRevealOption, delay: 1500 });
+    ScrollReveal().reveal(".content .socials span", {
+      ...scrollRevealOption,
+      delay: 2000,
+      interval: 500,
+    });
 
-// // //       TweenMax.from('.size', 1, {
-// // //           delay: 1.8,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.staggerFrom('.size ul li', .3, {
-// // //           delay: 2,
-// // //           opacity: 0,
-// // //           y: 20,
-// // //           ease: Power3.easeInOut
-// // //       }, 0.08)
-// // //       TweenMax.from('.bottom-right ul li:first-child', .5, {
-// // //           delay: 2.4,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.bottom-right ul li:last-child', .6, {
-// // //           delay: 2.4,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.bottom-img', 1, {
-// // //           delay: 2.4,
-// // //           opacity: 0,
-// // //           x: -20,
-// // //           ease: Expo.easeInOut
-// // //       })
+    // Cleanup function to remove event listeners
+    return () => {
+      menuBtn.removeEventListener("click", handleMenuClick);
+      navLinks.removeEventListener("click", handleNavClick);
+    };
+  }, []);
+  useEffect(() => {
+    // Animation logic here
+    const animateElements = () => {
+      TweenMax.to(".first", 1.5, {
+        delay: 0.2,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
 
-// // //       TweenMax.from('.product-title', 3, {
-// // //           delay: 2.2,
-// // //           opacity: 0,
-// // //           y: 50,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.product-img', 1, {
-// // //           delay: 4.2,
-// // //           opacity: 0,
-// // //           y: -800,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.product-desc p', 3, {
-// // //           delay: 4.5,
-// // //           opacity: 0,
-// // //           y: -50,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //       TweenMax.from('.product-desc button', 3, {
-// // //           delay: 6,
-// // //           opacity: 0,
-// // //           y: -50,
-// // //           ease: Expo.easeInOut
-// // //       })
-// // //         };
+      TweenMax.to(".second", 1.5, {
+        delay: 0.4,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
 
-// // //         animateElements();
+      TweenMax.to(".third", 1.5, {
+        delay: 0.6,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
 
-// // //         // Clean up animations on unmount
-// // //         return () => {
-// // //             // Ensure to clean up any ongoing animations or timers
-// // //         };
-// // //     }, []);
+      TweenMax.from(".logo", 1, {
+        delay: 1,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu", 1, {
+        delay: 1.2,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
 
-// // //     return (
-// // //       <>
-// // //        <div class="container">
+      TweenMax.from(".search", 0.8, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
 
-// // // <div class="overlay first"></div>
-// // // <div class="overlay second"></div>
-// // // <div class="overlay third"></div>
+      TweenMax.from(".bag", 1, {
+        delay: 1.6,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
 
-// // // </div>
-// // //       </>
-// // //     );
-// // // };
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1,
+        {
+          delay: 2,
+          opacity: 0,
+          x: -20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
 
-// // // export default AdidasLandingPage;
+      TweenMax.from(".size", 1, {
+        delay: 1.8,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.staggerFrom(
+        ".size ul li",
+        0.3,
+        {
+          delay: 2,
+          opacity: 0,
+          y: 20,
+          ease: Power3.easeInOut,
+        },
+        0.08
+      );
+      TweenMax.from(".bottom-right ul li:first-child", 0.5, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-right ul li:last-child", 0.6, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".bottom-img", 1, {
+        delay: 2.4,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
 
-// // // import React from 'react';
+      TweenMax.from(".product-title", 3, {
+        delay: 2.2,
+        opacity: 0,
+        y: 50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-img", 1, {
+        delay: 4.2,
+        opacity: 0,
+        y: -800,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc p", 3, {
+        delay: 4.5,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".product-desc button", 3, {
+        delay: 6,
+        opacity: 0,
+        y: -50,
+        ease: Expo.easeInOut,
+      });
+    };
 
-// // const App = () => {
-// //   const handleMenuClick = () => {
-// //     const navLinks = document.getElementById("nav-links");
-// //     navLinks.classList.toggle("open");
-// //     const isOpen = navLinks.classList.contains("open");
-// //     const menuBtnIcon = document.getElementById("menu-btn").querySelector("i");
-// //     menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-// //   };
+    animateElements();
 
-// //   const handleCloseMenu = () => {
-// //     const navLinks = document.getElementById("nav-links");
-// //     navLinks.classList.remove("open");
-// //     const menuBtnIcon = document.getElementById("menu-btn").querySelector("i");
-// //     menuBtnIcon.setAttribute("class", "ri-menu-line");
-// //   };
+    // Clean up animations on unmount
+    return () => {
+      // Ensure to clean up any ongoing animations or timers
+    };
+  }, []);
 
-// //   // const scrollRevealOption = {
-// //   //   distance: "50px",
-// //   //   origin: "bottom",
-// //   //   duration: 1000,
-// //   // };
+  const conatiner = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
 
-// //   // React.useEffect(() => {
-// //   //   const scrollReveal = require("scrollreveal").default;
-// //   //   scrollReveal().reveal(".content h1", { ...scrollRevealOption });
-// //   //   scrollReveal().reveal(".content h4", { ...scrollRevealOption, delay: 500 });
-// //   //   scrollReveal().reveal(".content h2, .content h6, .content form", { ...scrollRevealOption, delay: 1000 });
-// //   //   scrollReveal().reveal(".content p", { ...scrollRevealOption, delay: 1500 });
-// //   //   scrollReveal().reveal(".content .socials span", { ...scrollRevealOption, delay: 2000, interval: 500 });
-// //   // }, []);
+      transition: {
+        delayChildren: 2,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+  const item = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+    },
+  };
+  return (
+    <body>
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
+      <div className="nav">
+        <div class="nav__bar">
+          <div class="nav__header">
+            <div class="nav__logo">
+              <Logo />
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+          <ul class="nav__links" id="nav-links">
+            <li>
+              <Link to="/">HOME</Link>
+            </li>
+            <li>
+              <Link to="/Payment">PAYMENT</Link>
+            </li>
+            <li>
+              <Link to="/Payroll">PAYROLL</Link>
+            </li>
+            <li>
+              <Link to="/Project">PROJECT</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-// //   useEffect(() => {
-// //     // Animation logic here
-// //     const animateElements = () => {
-// //         TweenMax.to('.first', 1.5, {
-// //             delay: 0.2,
-// //             left: '-100%',
-// //             ease: Expo.easeInOut
-// //         });
+      <div
+        className="body"
+        variants={conatiner}
+        initial="hidden"
+        animate="show"
+      >
+        <div className="container">
+          <div className="contents">
+            <h1>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.13"
+                data-scroll-speed="4"
+              >
+                P
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.9"
+                data-scroll-speed="4"
+              >
+                A
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.06"
+                data-scroll-speed="4"
+              >
+                Y
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                M
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                E
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.04"
+                data-scroll-speed="4"
+              >
+                N
+              </motion.span>
+              <motion.span
+                variants={item}
+                data-scroll
+                data-scroll-delay="0.4"
+                data-scroll-speed="4"
+              >
+                T
+              </motion.span>
+              {/* Payment */}
+              <br />
+              {/* Holiday */}
+            </h1>
+            <motion.h4
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
+              Our Payment
+            </motion.h4>
+            {/* <h2>GET 20% OFF</h2> */}
+            <motion.h6
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
+              From <span>secure payment processing</span> to adopting new
+              technologies like
+              <span>mobile payments</span> and <span>cryptocurrencies,</span> we
+              provide comprehensive support every step of the way.
+            </motion.h6>
 
-// //   TweenMax.to('.second', 1.5, {
-// //       delay: .4,
-// //       left: '-100%',
-// //       ease: Expo.easeInOut
-// //   })
+            <motion.p
+              data-scroll
+              data-scroll-delay="0.04"
+              data-scroll-speed="2"
+            >
+              We work with clients to assist them keep pace, capture and develop
+              responses to the rapidly changing payments landscape
+            </motion.p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="contains">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Lagos</h4>
+              <ul>
+                <li> 6b Saka Jojo Street, </li>
+                <li>Off Adeola Odeku,Off</li>
+                <li>Ideja, Victoria Island</li>
+                <li>Lagos, Nigeria</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Abuja</h4>
+              <ul>
+                <li>22 Kumasi, Crescent,</li>
+                <li>Wuse 2 Federal,</li>
+                <li>Capitial Territory</li>
+                <li>Abuja, Nigeria</li>
+                {/* <li><a href="#">payment options</a></li> */}
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Accra</h4>
+              <ul>
+                <li>Regus Building,</li>
+                <li>5 Roman Road,</li>
+                <li>Off Borstal Ave Lane.</li>
+                <li>Accra</li>
+                <li>
+                  {" "}
+                  <a href="tel:+233 541 604 192">P:+233 541 604 192</a>{" "}
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Nairobi</h4>
+              <ul>
+                <li>Windsor House,</li>
+                <li>University way,</li>
+                <li>Muindi Mbugu Street, </li>
+                <li>Nairobi, Kenya.</li>
+                <li>
+                  {" "}
+                  <a href="tel:+233 541 604 192">P:+233 541 604 192</a>{" "}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  );
+};
 
-// //   TweenMax.to('.third', 1.5, {
-// //       delay: .6,
-// //       left: '-100%',
-// //       ease: Expo.easeInOut
-// //   })
-
-// //   TweenMax.from('.logo', 1, {
-// //       delay: 1,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.menu', 1, {
-// //       delay: 1.2,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-
-// //   TweenMax.from('.search', .8, {
-// //       delay: 1.6,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-
-// //   TweenMax.from('.bag', 1, {
-// //       delay: 1.6,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-
-// //   TweenMax.staggerFrom('.media ul li', 1, {
-// //       delay: 2,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Power3.easeInOut
-// //   }, 0.08)
-
-// //   TweenMax.from('.size', 1, {
-// //       delay: 1.8,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.staggerFrom('.size ul li', .3, {
-// //       delay: 2,
-// //       opacity: 0,
-// //       y: 20,
-// //       ease: Power3.easeInOut
-// //   }, 0.08)
-// //   TweenMax.from('.bottom-right ul li:first-child', .5, {
-// //       delay: 2.4,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.bottom-right ul li:last-child', .6, {
-// //       delay: 2.4,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.bottom-img', 1, {
-// //       delay: 2.4,
-// //       opacity: 0,
-// //       x: -20,
-// //       ease: Expo.easeInOut
-// //   })
-
-// //   TweenMax.from('.product-title', 3, {
-// //       delay: 2.2,
-// //       opacity: 0,
-// //       y: 50,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.product-img', 1, {
-// //       delay: 4.2,
-// //       opacity: 0,
-// //       y: -800,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.product-desc p', 3, {
-// //       delay: 4.5,
-// //       opacity: 0,
-// //       y: -50,
-// //       ease: Expo.easeInOut
-// //   })
-// //   TweenMax.from('.product-desc button', 3, {
-// //       delay: 6,
-// //       opacity: 0,
-// //       y: -50,
-// //       ease: Expo.easeInOut
-// //   })
-// //     };
-
-// //     animateElements();
-
-// //     // Clean up animations on unmount
-// //     return () => {
-// //         // Ensure to clean up any ongoing animations or timers
-// //     };
-// // }, []);
-
-// //   return (
-
-// //       <>
-// //         <nav>
-// //           <div className="nav__bar">
-// //             <div className="nav__header">
-// //               <div className="nav__logo">
-// //                 <a href="#">Travel<span>.com</span></a>
-// //               </div>
-// //               <div className="nav__menu__btn" id="menu-btn" onClick={handleMenuClick}>
-// //                 <i className="ri-menu-line"></i>
-// //               </div>
-// //             </div>
-// //             <ul className="nav__links" id="nav-links" onClick={handleCloseMenu}>
-// //               <li><a href="#">HOME</a></li>
-// //               <li><a href="#">ABOUT US</a></li>
-// //               <li><a href="#">BOOKING</a></li>
-// //               <li><a href="#">CONTACT US</a></li>
-// //             </ul>
-// //           </div>
-// //         </nav>
-// //         <div className="container">
-// //         <div class="overlay first"></div>
-// //     <div class="overlay second"></div>
-// //     <div class="overlay third"></div>
-
-// //           <div className="content">
-// //             <h1>Plan Your<br />Holiday</h1>
-// //             <h4>Explore Worldwide</h4>
-// //             <h2>GET 20% OFF</h2>
-// //             <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
-// //             <form action="/">
-// //               <input type="text" placeholder="Enter Destination" />
-// //               <button><i className="ri-arrow-right-s-line"></i></button>
-// //             </form>
-// //             <p>
-// //               We are passionate about uncovering the wonders of our diverse world
-// //               and sharing them with you. Our mission is to inspire a sense of
-// //               discovery, and stories that make our planet unique.
-// //             </p>
-// //             <div className="socials">
-// //               <span>
-// //                 <a href="#"><i className="ri-facebook-fill"></i></a>
-// //               </span>
-// //               <span>
-// //                 <a href="#"><i className="ri-twitter-fill"></i></a>
-// //               </span>
-// //               <span>
-// //                 <a href="#"><i className="ri-instagram-line"></i></a>
-// //               </span>
-// //             </div>
-// //           </div>
-// //         </div>
-
-// //       </>
-
-// //   );
-// // };
-
-// // export default App;
-
-// // import React, { useState } from 'react';
-// // // import ScrollReveal from 'scrollreveal';
-// // // import 'remixicon/fonts/remixicon.css'; // Importing Remixicon CSS
-// // import '../App.css'; // Importing custom styles
-
-// // const App = () => {
-// //   const [navOpen, setNavOpen] = useState(false);
-
-// //   const toggleNav = () => {
-// //     setNavOpen(!navOpen);
-// //   };
-
-// //   const closeNav = () => {
-// //     setNavOpen(false);
-// //   };
-
-// //   // Run ScrollReveal when the component mounts
-// //   React.useEffect(() => {
-// //     const scrollRevealOption = {
-// //       distance: '50px',
-// //       origin: 'bottom',
-// //       duration: 1000,
-// //     };
-
-// //     ScrollReveal().reveal('.content h1', {
-// //       ...scrollRevealOption,
-// //     });
-// //     ScrollReveal().reveal('.content h4', {
-// //       ...scrollRevealOption,
-// //       delay: 500,
-// //     });
-// //     ScrollReveal().reveal('.content h2, .content h6, .content form', {
-// //       ...scrollRevealOption,
-// //       delay: 1000,
-// //     });
-// //     ScrollReveal().reveal('.content p', {
-// //       ...scrollRevealOption,
-// //       delay: 1500,
-// //     });
-// //     ScrollReveal().reveal('.content .socials span', {
-// //       ...scrollRevealOption,
-// //       delay: 2000,
-// //       interval: 500,
-// //     });
-// //   }, []); // Empty dependency array to run this effect only once
-
-// //   return (
-// //     <div>
-// //       <nav>
-// //         <div className="nav__bar">
-// //           <div className="nav__header">
-// //             <div className="nav__logo">
-// //               <a href="#">Travel<span>.com</span></a>
-// //             </div>
-// //             <div className="nav__menu__btn" id="menu-btn" onClick={toggleNav}>
-// //               <i className={navOpen ? 'ri-close-line' : 'ri-menu-line'}></i>
-// //             </div>
-// //           </div>
-// //           <ul className={navOpen ? 'nav__links open' : 'nav__links'} id="nav-links">
-// //             <li><a href="#" onClick={closeNav}>HOME</a></li>
-// //             <li><a href="#" onClick={closeNav}>ABOUT US</a></li>
-// //             <li><a href="#" onClick={closeNav}>BOOKING</a></li>
-// //             <li><a href="#" onClick={closeNav}>CONTACT US</a></li>
-// //           </ul>
-// //         </div>
-// //       </nav>
-// //       <div className="container">
-// //         <div className="content">
-// //           <h1>Plan Your<br />Holiday</h1>
-// //           <h4>Explore Worldwide</h4>
-// //           <h2>GET 20% OFF</h2>
-// //           <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
-// //           <form action="/">
-// //             <input type="text" placeholder="Enter Destination" />
-// //             <button><i className="ri-arrow-right-s-line"></i></button>
-// //           </form>
-// //           <p>
-// //             We are passionate about uncovering the wonders of our diverse world
-// //             and sharing them with you. Our mission is to inspire a sense of
-// //             discovery, and stories that make our planet unique.
-// //           </p>
-// //           <div className="socials">
-// //             <span>
-// //               <a href="#"><i className="ri-facebook-fill"></i></a>
-// //             </span>
-// //             <span>
-// //               <a href="#"><i className="ri-twitter-fill"></i></a>
-// //             </span>
-// //             <span>
-// //               <a href="#"><i className="ri-instagram-line"></i></a>
-// //             </span>
-// //           </div>
-// //         </div>
-// //       </div>
-// //     </div>
-// //   );
-// // };
-
-// // export default App;
-
-// // import React from 'react'
-// // import "../App.css"
-// // const projects = () => {
-// //   return (
-// //     <div className="body">
-
-// //     <div className="container">
-// //     <div className="content">
-// //       <h1>Plan Your<br />Holiday</h1>
-// //       <h4>Explore Worldwide</h4>
-// //       <h2>GET 20% OFF</h2>
-// //       <h6>Winter Voucher Code <span>TravelSafe20</span></h6>
-// //       <form action="/">
-// //         <input type="text" placeholder="Enter Destination" />
-// //         <button><i className="ri-arrow-right-s-line"></i></button>
-// //       </form>
-// //       <p>
-// //         We are passionate about uncovering the wonders of our diverse world
-// //         and sharing them with you. Our mission is to inspire a sense of
-// //         discovery, and stories that make our planet unique.
-// //       </p>
-// //       <div className="socials">
-// //         <span>
-// //           <a href="#"><i className="ri-facebook-fill"></i></a>
-// //         </span>
-// //         <span>
-// //           <a href="#"><i className="ri-twitter-fill"></i></a>
-// //         </span>
-// //         <span>
-// //           <a href="#"><i className="ri-instagram-line"></i></a>
-// //         </span>
-// //       </div>
-// //     </div>
-// //   </div>
-// //     </div>
-
-// //   )
-// // }
-
-// // export default projects
-
-// import React from "react";
-// import "../components/Project.css";
-
-// const projects = () => {
-//   return (
-//     <>
-// {/*      
-//         <div className="body bg-black text-white">
-//           <div className="container">
-//             <div className="content">
-//               <h1>
-//                 Plan Your
-//                 <br />
-//                 Holiday
-//               </h1>
-//               <h4>Explore Worldwide</h4>
-//               <h2>GET 20% OFF</h2>
-//               <h6>
-//                 Winter Voucher Code <span>TravelSafe20</span>
-//               </h6>
-//               <form action="/">
-//                 <input type="text" placeholder="Enter Destination" />
-//                 <button>
-//                   <i className="ri-arrow-right-s-line"></i>
-//                 </button>
-//               </form>
-//               <p>
-//                 We are passionate about uncovering the wonders of our diverse
-//                 world and sharing them with you. Our mission is to inspire a
-//                 sense of discovery, and stories that make our planet unique.
-//               </p>
-//             </div>
-//           </div>
-//         </div> */}
-      
-//     </>
-//   );
-// };
-
-// export default projects;
+export default Payment;

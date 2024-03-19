@@ -1,5 +1,5 @@
 // import React from 'react'
-import "../components/Payroll.css";
+import "../App.css";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -9,25 +9,25 @@ import { TweenMax, Expo, Power3 } from "gsap";
 const Payroll = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
-    const navLinks = document.getElementById("nav-links");
+    const navsLinks = document.getElementById("navs-links");
     const menuBtnIcon = menuBtn.querySelector("i");
 
     const handleMenuClick = () => {
-      navLinks.classList.toggle("open");
-      const isOpen = navLinks.classList.contains("open");
+      navsLinks.classList.toggle("open");
+      const isOpen = navsLinks.classList.contains("open");
       menuBtnIcon.setAttribute(
         "class",
         isOpen ? "ri-close-line" : "ri-menu-line"
       );
     };
 
-    const handleNavClick = () => {
-      navLinks.classList.remove("open");
+    const handlenavsClick = () => {
+      navsLinks.classList.remove("open");
       menuBtnIcon.setAttribute("class", "ri-menu-line");
     };
 
     menuBtn.addEventListener("click", handleMenuClick);
-    navLinks.addEventListener("click", handleNavClick);
+    navsLinks.addEventListener("click", handlenavsClick);
 
     const scrollRevealOption = {
       distance: "50px",
@@ -51,7 +51,7 @@ const Payroll = () => {
     // Cleanup function to remove event listeners
     return () => {
       menuBtn.removeEventListener("click", handleMenuClick);
-      navLinks.removeEventListener("click", handleNavClick);
+      navsLinks.removeEventListener("click", handlenavsClick);
     };
   }, []);
   useEffect(() => {
@@ -210,17 +210,17 @@ const Payroll = () => {
       <div class="overlay first"></div>
       <div class="overlay second"></div>
       <div class="overlay third"></div>
-      <nav>
-        <div class="nav__bar">
-          <div class="nav__header">
-            <div class="nav__logo">
+      <navs>
+        <div class="navs__bar">
+          <div class="navs__header">
+            <div class="navs__logo">
               <Logo />
             </div>
-            <div class="nav__menu__btn" id="menu-btn">
+            <div class="navs__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
             </div>
           </div>
-          <ul class="nav__links" id="nav-links">
+          <ul class="navs__links" id="navs-links">
             <li>
               <a href="#">HOME</a>
             </li>
@@ -235,7 +235,7 @@ const Payroll = () => {
             </li>
           </ul>
         </div>
-      </nav>
+      </navs>
 
       <div
         className="bg1"
@@ -244,7 +244,7 @@ const Payroll = () => {
         animate="show"
       >
         <div className="container">
-          <div className="contents">
+          <div className="contentss">
             <h1>
               <motion.span
                 variants={item}
@@ -276,7 +276,7 @@ const Payroll = () => {
                 data-scroll-delay="0.04"
                 data-scroll-speed="4"
               >
-                M
+                R
               </motion.span>
               <motion.span
                 variants={item}
@@ -284,7 +284,7 @@ const Payroll = () => {
                 data-scroll-delay="0.04"
                 data-scroll-speed="4"
               >
-                E
+                O
               </motion.span>
               <motion.span
                 variants={item}
@@ -292,7 +292,7 @@ const Payroll = () => {
                 data-scroll-delay="0.04"
                 data-scroll-speed="4"
               >
-                N
+                L
               </motion.span>
               <motion.span
                 variants={item}
@@ -300,7 +300,7 @@ const Payroll = () => {
                 data-scroll-delay="0.4"
                 data-scroll-speed="4"
               >
-                T
+                L
               </motion.span>
               {/* Payment */}
               <br />
@@ -311,7 +311,7 @@ const Payroll = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              Our Payment
+              {/* Our Payment */}
             </motion.h4>
             {/* <h2>GET 20% OFF</h2> */}
             <motion.h6
@@ -319,10 +319,8 @@ const Payroll = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              From <span>secure payment processing</span> to adopting new
-              technologies like
-              <span>mobile payments</span> and <span>cryptocurrencies,</span> we
-              provide comprehensive support every step of the way.
+            
+             We are known for <span>Professional HR Services</span> for Indigenous & Multinational companies. We deliever <span>Expert Employee Management</span> Across Sectors.
             </motion.h6>
 
             <motion.p
@@ -330,8 +328,7 @@ const Payroll = () => {
               data-scroll-delay="0.04"
               data-scroll-speed="2"
             >
-              We work with clients to assist them keep pace, capture and develop
-              responses to the rapidly changing payments landscape
+             We offer employee management services using a professionally certified HR team for indigenous and multinational clients across varied sectors.
             </motion.p>
           </div>
         </div>
