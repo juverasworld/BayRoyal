@@ -10,25 +10,25 @@ import { Link } from "react-router-dom";
 const Payroll = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
-    const navsLinks = document.getElementById("navs-links");
+    const navLinks = document.getElementById("nav-links");
     const menuBtnIcon = menuBtn.querySelector("i");
 
     const handleMenuClick = () => {
-      navsLinks.classList.toggle("open");
-      const isOpen = navsLinks.classList.contains("open");
+      navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.contains("open");
       menuBtnIcon.setAttribute(
         "class",
         isOpen ? "ri-close-line" : "ri-menu-line"
       );
     };
 
-    const handlenavsClick = () => {
-      navsLinks.classList.remove("open");
+    const handlenavClick = () => {
+      navLinks.classList.remove("open");
       menuBtnIcon.setAttribute("class", "ri-menu-line");
     };
 
     menuBtn.addEventListener("click", handleMenuClick);
-    navsLinks.addEventListener("click", handlenavsClick);
+    navLinks.addEventListener("click", handlenavClick);
 
     const scrollRevealOption = {
       distance: "50px",
@@ -52,7 +52,7 @@ const Payroll = () => {
     // Cleanup function to remove event listeners
     return () => {
       menuBtn.removeEventListener("click", handleMenuClick);
-      navsLinks.removeEventListener("click", handlenavsClick);
+      navLinks.removeEventListener("click", handlenavClick);
     };
   }, []);
   useEffect(() => {
@@ -211,17 +211,17 @@ const Payroll = () => {
       <div class="overlay first"></div>
       <div class="overlay second"></div>
       <div class="overlay third"></div>
-      <navs>
-        <div class="navs__bar">
-          <div class="navs__header">
-            <div class="navs__logo">
+      <nav>
+        <div class="nav__bar">
+          <div class="nav__header">
+            <div class="nav__logo">
               <Logo />
             </div>
-            <div class="navs__menu__btn" id="menu-btn">
+            <div class="nav__menu__btn" id="menu-btn">
               <i class="ri-menu-line"></i>
             </div>
           </div>
-          <ul class="navs__links" id="navs-links">
+          <ul class="nav__links" id="nav-links">
           <li>
               <Link to="/">HOME</Link>
             </li>
@@ -236,7 +236,7 @@ const Payroll = () => {
             </li>
           </ul>
         </div>
-      </navs>
+      </nav>
 
       <div
         className="bg1"

@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #fff;
+  --primary-color: rgba(1, 19, 27, 1);
   --secondary-color: #ff0a0a;
   --white: #ffffff;
   --max-width: 1200px;
@@ -141,7 +141,7 @@ navs {
   right: 0;
   width: 100vw;
   height: 100%;
-  background-color: rgba(255, 215, 0, 0.7);
+  background-color: #80404080;
   z-index: -1;
 }
 
@@ -249,7 +249,7 @@ navs {
 @media (width > 768px) {
   navs {
     position: static;
-    background-color: #fff;
+    background-color: rgba(1, 19, 27, 1);
   }
 
   .navs__bar {
@@ -318,7 +318,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #fff;
+	background-color: rgba(1, 19, 27, 1);
     /* padding: 70px 0; */
 }
 .footer-col{
