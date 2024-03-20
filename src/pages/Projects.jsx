@@ -10,6 +10,12 @@ import { TweenMax, Expo, Power3 } from "gsap";
 import { Link } from "react-router-dom";
 import Footer from "../components/Foot";
 // import Footer from "../components/Foot";
+import "@fontsource/akaya-telivigala";
+import styled from "styled-components";
+
+const Section = styled.section`
+font-family: "Akaya Telivigala", cursive;
+`
 const Projects = () => {
   useEffect(() => {
     const menuBtn = document.getElementById("menu-btn");
@@ -213,6 +219,9 @@ const Projects = () => {
     },
   };
   return (
+    <Section>
+
+
     <body>
       <div class="overlay first"></div>
       <div class="overlay second"></div>
@@ -396,6 +405,7 @@ const Projects = () => {
       </footer>
   <Footer/>
     </body>
+    </Section>
   );
 };
 

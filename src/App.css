@@ -1,6 +1,7 @@
 
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
 
 :root {
   --primary-color: rgba(1, 19, 27, 1);
@@ -21,9 +22,12 @@ a {
 }
 body{
   overflow-x: hidden;
+  font-family: "Akaya Telivigala", system-ui;
 }
 .body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Akaya Telivigala", system-ui;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100vh;
   background-image: url("https://img.freepik.com/premium-photo/woman-holding-credit-card-phone-with-green-card-her-hand-generative-ai_868797-570.jpg?w=900");
   background-position: center center;
@@ -32,7 +36,9 @@ body{
   overflow-x: hidden;
 }
 .bg1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Akaya Telivigala", system-ui;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100vh;
   /* background-image: url("../assets/4.png"); */
   background-image: url("./assets/4.webp");
@@ -49,12 +55,14 @@ body{
 .container {
   max-width: var(--max-width);
   margin-inline: auto;
+  font-family: "Akaya Telivigala", system-ui;
 }
 
 navs {
   position: fixed;
   isolation: isolate;
   width: 100%;
+  font-family: "Akaya Telivigala", system-ui;
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -81,6 +89,7 @@ navs {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "Akaya Telivigala", system-ui;
   justify-content: space-between;
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -164,6 +173,7 @@ navs {
   padding: 8rem 1rem;
   display: flex;
   align-items: center;
+  font-family: "Akaya Telivigala", system-ui;
   justify-content: center;
   flex-direction: column;
   text-align: center;
@@ -319,6 +329,7 @@ navs {
     align-items: flex-start;
     text-align: left;
     margin-inline-start: unset;
+    font-family: "Akaya Telivigala", system-ui;
   }
 
   .contentss h1 {
@@ -342,6 +353,7 @@ navs {
 
 
 .contains{
+  font-family: "Akaya Telivigala", system-ui;
 	max-width: 1170px;
 	margin:auto;
 }
@@ -353,6 +365,7 @@ ul{
 	list-style: none;
 }
 .footer{
+  font-family: "Akaya Telivigala", system-ui;
 	background-color: rgba(1, 19, 27, 1);
     /* padding: 70px 0; */
 }

@@ -1,5 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import { motion } from "framer-motion";
+import "@fontsource/akaya-telivigala";
 
 import { useRef } from "react";
 import React, { useLayoutEffect } from "react";
@@ -15,6 +16,7 @@ const Section = styled.section`
   min-height: 100vh;
   width: 100%;
   // background-color: ${(props) => props.theme.text};
+  font-family: "Akaya Telivigala", cursive;
   display: flex;
   justify-content: center;
   align-items: center;

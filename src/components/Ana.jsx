@@ -8,11 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
+import "@fontsource/akaya-telivigala";
 
 const VideoContainer = styled.section`
   width: 100%;
   height: 100vh;
   position: relative;
+  font-family: "Akaya Telivigala", cursive;
   background: url(/hero.mp4);
 // display:flex;
 // flex-direction:column;
@@ -58,7 +60,7 @@ const Title = styled(motion.div)`
   right: 0;
   left: 0;
   z-index: 5;
-
+  font-family: "Akaya Telivigala", cursive;
   //   display: flex;
   //   flex-direction: column;
   //   justify-content: center;
@@ -71,12 +73,12 @@ const Title = styled(motion.div)`
   //   }
 
   h1 {
-    font-family: "Kaushan Script";
+    font-family: "Akaya Telivigala", cursive;
     font-size: ${(props) => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
   }
   h2 {
-    font-family: "Sirin Stencil";
+    font-family: "Akaya Telivigala", cursive;
     font-size: ${(props) => props.theme.fontlg};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     font-weight: 300;

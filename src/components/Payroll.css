@@ -1,6 +1,5 @@
 
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
 
 :root {
   --primary-color: rgba(1, 19, 27, 1);
@@ -21,7 +20,9 @@ a {
 }
 
 .body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Akaya Telivigala", system-ui;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100vh;
   background-image: url("https://img.freepik.com/premium-photo/woman-holding-credit-card-phone-with-green-card-her-hand-generative-ai_868797-570.jpg?w=900");
   background-position: center center;
@@ -30,7 +31,9 @@ a {
   overflow-x: hidden;
 }
 .bg3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Akaya Telivigala", system-ui;
+  /* font-weight: 400;
+  font-style: normal; */
   min-height: 100vh;
   /* background-image: url("../assets/4.png"); */
   /* background-image: url("../assets/4.webp"); */
@@ -47,11 +50,13 @@ a {
 .container {
   max-width: var(--max-width);
   margin-inline: auto;
+  font-family: "Akaya Telivigala", system-ui;
 }
 
 .nav {
   position: fixed;
   isolation: isolate;
+  font-family: "Akaya Telivigala", system-ui;
   width: 100%;
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -157,6 +162,7 @@ a {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
+  font-family: "Akaya Telivigala", system-ui;
   max-width: calc(var(--max-width) / 2);
   margin-inline: auto;
   padding: 8rem 1rem;
@@ -240,6 +246,7 @@ a {
   color: var(--white);
   background-color: var(--secondary-color);
   cursor: pointer;
+  font-family: "Akaya Telivigala", system-ui;
 }
 
 .contens p {
@@ -247,6 +254,7 @@ a {
   font-weight: 200;
   color: var(--white);
   line-height: 1.75rem;
+  font-family: "Akaya Telivigala", system-ui;
 }
 
 .socials {
@@ -267,6 +275,7 @@ a {
 @media (width > 540px) {
   .contens h1 {
     font-size: 4.5rem;
+    font-family: "Akaya Telivigala", system-ui;
     line-height: 4.5rem;
   }
 
@@ -352,11 +361,13 @@ ul{
 }
 .footer{
 	background-color: rgba(1, 19, 27, 1);
+  font-family: "Akaya Telivigala", system-ui;
     /* padding: 70px 0; */
 }
 .footer-col{
    width: 25%;
    padding: 0 15px;
+   font-family: "Akaya Telivigala", system-ui;
 }
 .footer-col h4{
 	font-size: 18px;

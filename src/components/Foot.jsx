@@ -9,11 +9,13 @@ import Facebook from "../Icons/Facebook";
 import LinkedIn from "../Icons/LinkedIn";
 import Phone from "../Icons/Phone";
 import Gmail from "../Icons/Gmail";
+import "@fontsource/akaya-telivigala";
 
 const Section = styled.section`
   // min-height: 100vh;
   // height:100vh
   width: 100%;
+  font-family: "Akaya Telivigala", cursive;
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   position: relative;
