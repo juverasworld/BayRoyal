@@ -218,7 +218,13 @@ import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 import Logo from "./Logo";
+import "@fontsource/akaya-telivigala";
+import styled from "styled-components";
 
+
+const Section = styled.section`
+font-family: "Akaya Telivigala", cursive;
+`
 const Navbar = () => {
   // const scrollTo = (id) => {
 // let element = document.getElementById(id);
@@ -251,6 +257,8 @@ const Navbar = () => {
   }, []);
 
   return (
+    <Section>
+
     <nav
       className={`${
         styles.paddingX
@@ -331,6 +339,7 @@ const Navbar = () => {
         </div> */}
       </div>
     </nav>
+    </Section>
   );
 };
 

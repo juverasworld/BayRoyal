@@ -91,6 +91,8 @@ img {
   background-color: #000;
   color: #fff;
   pointer-events: none;
+  font-family: "Akaya Telivigala", system-ui;
+
 }
 
 .counter{
@@ -102,6 +104,8 @@ img {
   font-size: 100px;
   line-height: 102px;
   font-weight: 400;
+  font-family: "Akaya Telivigala", system-ui;
+
   clip-path: polygon(0 0, 100% 0 , 100% 100px, 0 100px);
 }
 

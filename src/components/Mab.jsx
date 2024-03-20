@@ -6,6 +6,8 @@ import styled from "styled-components";
 // import Accordion from "../Accordion";
 import { useRef } from "react";
 import gsap from "gsap";
+import "@fontsource/akaya-telivigala";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Mab = () => {
 

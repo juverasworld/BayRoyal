@@ -14,7 +14,7 @@ const Title = styled.h2`
   width: 80%;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
-
+  font-family: "Akaya Telivigala", cursive;
   span {
     text-transform: uppercase;
     // font-family: "Akaya Telivigala", cursive;
@@ -49,6 +49,7 @@ const Subtitle = styled.h3`
   color:white;
   // color: ${(props) => `rgba(${props.theme.textRgba}, 0.6)`};
   font-weight: 600;
+  font-family: "Akaya Telivigala", cursive;
   margin-bottom: 1rem;
   border:2px, solid red;
   width: 80%;
@@ -69,6 +70,7 @@ const Subtitle = styled.h3`
 const ButtonContainer = styled.div`
   width: 80%;
   display:flex;
+  font-family: "Akaya Telivigala", cursive;
   // background-color:white;
   // items
   // align-self: flex-start;
@@ -131,9 +133,9 @@ const TypewriterText = () => {
            International
           </motion.h1>
         </div>
-        <div className="">
+        <div className="my-5">
 
-        {/* <Typewriter
+        <Typewriter
           options={{
             autoStart: true,
             loop: true,
@@ -153,17 +155,18 @@ const TypewriterText = () => {
               .start();
           }}
           variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4"
-        /> */}
+        />
         </div>
       </Title>
-<div className="md:my-12 my-6">
+      <div className="my-6"></div>
+{/* <div className="md:my-12 my-6">
 
       <Subtitle >
       <motion.p variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
         Payment <span className="text-red-700">.</span> Project <span className="text-red-700">.</span> Payroll
         </motion.p>
         </Subtitle>
-</div>
+</div> */}
 
 
       <ButtonContainer>
