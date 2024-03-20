@@ -143,13 +143,13 @@ const TypewriterText = () => {
           className=""
           onInit={(typewriter) => {
             typewriter
-              .typeString('<span class="text-1">Payout  </span>')
+              .typeString('<span class="text-1">Payroll  </span>')
               .pauseFor(2000)
               .deleteAll()
-              .typeString('<span class="text-2">Payment</span>')
+              .typeString('<span class="text-2">Payments</span>')
               .pauseFor(2000)
               .deleteAll()
-              .typeString("<span class='text-3'> Project</span>")
+              .typeString("<span class='text-3'> Projects</span>")
               .pauseFor(2000)
               .deleteAll()
               .start();
