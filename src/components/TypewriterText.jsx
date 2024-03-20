@@ -13,11 +13,11 @@ const Title = styled.h2`
   text-transform: capitalize;
   width: 80%;
   color: ${(props) => props.theme.text};
-  align-self: flex-start;
+  // align-self: flex-start;
   font-family: "Akaya Telivigala", cursive;
   span {
     text-transform: uppercase;
-    // font-family: "Akaya Telivigala", cursive;
+    font-family: "Akaya Telivigala", cursive;
   }
   .text-1 {
     color: blue;
@@ -34,8 +34,8 @@ const Title = styled.h2`
   }
 
   @media (max-width: 48em) {
-    align-self: center;
-    text-align: center;
+    // align-self: center;
+    // text-align: center;
   }
 
   @media (max-width: 40em) {
@@ -133,7 +133,7 @@ const TypewriterText = () => {
            International
           </motion.h1>
         </div>
-        <div className="my-5">
+        <div className="md:my-12 my-5">
 
         <Typewriter
           options={{
@@ -159,14 +159,14 @@ const TypewriterText = () => {
         </div>
       </Title>
       <div className="my-6"></div>
-{/* <div className="md:my-12 my-6">
+<div className="md:my-12 my-6">
 
-      <Subtitle >
+      {/* <Subtitle >
       <motion.p variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
         Payment <span className="text-red-700">.</span> Project <span className="text-red-700">.</span> Payroll
         </motion.p>
-        </Subtitle>
-</div> */}
+        </Subtitle> */}
+</div>
 
 
       <ButtonContainer>
