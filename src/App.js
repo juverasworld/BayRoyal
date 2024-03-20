@@ -32,6 +32,7 @@ import Ana from "./components/Ana";
 import Load from "./components/Loader";
 import Loader from "./components/Loader";
 import Payroll from "./pages/Payroll";
+import PEO from "./pages/PEO";
 
 
 
@@ -45,6 +46,7 @@ function App() {
        <Route path='/Projects' element={<Projects/>}/>
        <Route path='/Payment' element={<Payment/>}/>
        <Route path='/Payroll' element={<Payroll/>}/>
+       <Route path='/PEO' element={<PEO/>}/>
        {/* <Route path='/services' element={<OurService/>}/> */}
    </Routes>
          
