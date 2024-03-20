@@ -237,6 +237,9 @@ const Payroll = () => {
             <li>
               <Link to="/Projects">PROJECT</Link>
             </li>
+            <li>
+              <Link to="/PEO">P.E.O</Link>
+            </li>
           </ul>
         </div>
       </nav>

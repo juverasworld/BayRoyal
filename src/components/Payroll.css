@@ -46,7 +46,22 @@ a {
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
-
+.bg4{
+  font-family: "Akaya Telivigala", system-ui;
+  /* font-weight: 400;
+  font-style: normal; */
+  min-height: 100vh;
+  background-image: url("../assets/f1.jpg");
+  /* background-image: url("../assets/f1.jpg"); */
+  /* background-image: url("../assets/5.webp"); */
+  /* background-image: url("../assets/6.webp"); */
+  /* background-image: url("../assets/"); */
+  /* background-color: #ff6f00; */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
 .container {
   max-width: var(--max-width);
   margin-inline: auto;
