@@ -186,7 +186,8 @@ navs {
   right: 0;
   width: 100vw;
   height: 100%;
-  background-color: #80404080;
+  background-color: #84424280;
+  /* background-color: #84424280; */
   z-index: -1;
 }
 
