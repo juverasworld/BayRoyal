@@ -1,5 +1,6 @@
 {
   "name": "the-weirdos-starter-code",
+  "homepage": "https://bayroyalinternational.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
